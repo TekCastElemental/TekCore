@@ -1,9 +1,13 @@
 package com.teklitesoftware.tekcore;
 
+import com.teklitesoftware.tekcore.creativetabs.TabTekCoreMats;
+import com.teklitesoftware.tekcore.creativetabs.TabTekCoreTools;
 import com.teklitesoftware.tekcore.init.ModBlocks;
+import com.teklitesoftware.tekcore.init.ModCrafting;
 import com.teklitesoftware.tekcore.init.ModItems;
 import com.teklitesoftware.tekcore.proxy.CommonProxy;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -18,34 +22,43 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class TCengine {
-	
+
 	@Instance
 	public static TCengine instance;
-	
+
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
-	
+
+	public static CreativeTabs tools = new TabTekCoreTools("tabTCT");
+	public static CreativeTabs mats = new TabTekCoreMats("tabTCM");
+
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println("Pre Init");
-		
+
+		// Loading Blocks and Items
 		ModItems.init();
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
+
+		// Call Renders client-side.
 		proxy.init();
-		
+
+		// Sapphire Ore Spawns here.
+		GameRegistry.registerWorldGenerator(new SapphireGeneration(), 2);
 
 	}
-	
+
+	@EventHandler
 	public void Init(FMLInitializationEvent event) {
 		System.out.println("Init");
-		
-		GameRegistry.registerWorldGenerator(new SapphireGeneration(), 128);
+		ModCrafting.register();
 	}
-	
+
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		System.out.println("Post Init");
-		
+
 	}
 }

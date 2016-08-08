@@ -25,7 +25,7 @@ public class SapphireGeneration implements IWorldGenerator {
 		case -1:
 			generateEnd(world, random, chunkX, chunkZ);
 		case 0:
-			generateOverworld(world, random, chunkX, chunkZ);
+			generateSurface(world, random, chunkX * 16, chunkZ * 16);
 		case 1:
 			generateNether(world, random, chunkX, chunkZ);
 
@@ -36,26 +36,20 @@ public class SapphireGeneration implements IWorldGenerator {
 
 	}
 
-	public void generateOverworld(World world, Random rand, int x, int z) {
-		generateOre(ModBlocks.sapphireore, world, rand, x, z, 3, 10, 100, 1, 100, Blocks.STONE);
-	}
-
 	public void generateNether(World world, Random rand, int x, int z) {
 
 	}
-	
-	public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVienSize, int maxVienSize, int chance, int minY, int maxY, Block generateIn) {
-		for(int i = 0; i < chance; i++){
-			int defaultChunkSize = 16;
 
-			int Xpos = chunkX +random.nextInt(defaultChunkSize);
-			int Ypos = minY + random.nextInt(maxY - minY);
-			int Zpos = chunkZ +random.nextInt(defaultChunkSize);
+	public void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
+		for (int k = 0; k < 6; k++) {
+			int firstBlockXCoord = chunkX + rand.nextInt(16);
+			int firstBlockZCoord = chunkZ + rand.nextInt(16);
+			// Will be found between y = 0 and y = 20
+			int sY = rand.nextInt(30);
+			BlockPos sPos = new BlockPos(firstBlockXCoord, sY, firstBlockZCoord);
 
-			IBlockState state = block.getDefaultState();
-			BlockPos blockPos = new BlockPos(Xpos, Ypos, Zpos);
-
-			new WorldGenMinable(state, maxVienSize).generate(world, random, blockPos); 
+			
+			(new WorldGenMinable(ModBlocks.sapphireore.getDefaultState(), 4)).generate(world, rand, sPos);
 		}
 	}
 

@@ -1,14 +1,14 @@
 [
 {
-  "modid": "tekcoreone",
-  "name": "TekCore One",
+  "modid": "tekcore",
+  "name": "TekCore",
   "description": "Spiritual successor to maxCORE 2.",
   "version": "pre1.0",
   "mcversion": "${mcversion}",
-  "url": "TekLiteSoftware.com",
+  "url": "http://www.TekLiteSoftware.com",
   "updateUrl": "",
   "authorList": ["ElementalBlades"],
-  "logoFile": "",
+  "logoFile": "assets/tekcore/mcmod/tekcore.png",
   "screenshots": [],
   "dependencies": []
 }

@@ -1,3 +1,16 @@
 item.Ris.name=Reinforced Stick
+item.singot.name=Sapphire Ingot
 
+item.spick.name=Sapphire Pickaxe
+item.saxe.name=Sapphire Axe
+item.sspade.name=Sapphire Spade
+item.shoe.name=Sapphire Hoe
+item.ssword.name=Sapphire Sword
+item.tekcore:sapphireHelmet.name=Sapphire Helmet
+item.tekcore:sapphireChestplate.name=Sapphire Chestplate
+item.tekcore:sapphireLeggings.name=Sapphire Leggings
+item.tekcore:sapphireBoots.name=Sapphire Boots
 tile.sapphireore.name=Sapphire Ore
+
+itemGroup.tabTCT=TekCore Tools
+itemGroup.tabTCM=TekCore Materials & Equipment

@@ -14,33 +14,30 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-
 public class ModBlocks {
- 
-	
-
-
 
 	public static Block sapphireore;
-	
+
 	public static void init() {
-	sapphireore = new BlockSO();
+		// Calling the BlockSO class
+		sapphireore = new BlockSO();
 	}
-	
+
 	public static void register() {
+
 		GameRegistry.register(sapphireore);
 		GameRegistry.register(new ItemBlock(sapphireore).setRegistryName(sapphireore.getRegistryName()));
-		
-	
+
 	}
 
 	public static void registerRenders() {
 		registerRender(sapphireore);
 	}
-	
+
 	private static void registerRender(Block block) {
+
+		// So many crashes with this...
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(block.getRegistryName(), "inventory"));
-		
 
 	}
 }

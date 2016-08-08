@@ -3,14 +3,29 @@ package com.teklitesoftware.tekcore;
 public class Reference {
 	public static final String MOD_ID = "tekcore";
 	public static final String NAME = "TekCore One";
-	public static final String VERSION = "pre1.0 alpha";
+	public static final String VERSION = "0.1alpha";
 	public static final String ACCEPTED_VERSIONS = "[1.10.2]";
 	
 	public static final String CLIENT_PROXY_CLASS = "com.teklitesoftware.tekcore.proxy.ClientProxy";
 	public static final String SERVER_PROXY_CLASS = "com.teklitesoftware.tekcore.proxy.ServerProxy";
 	
 	public static enum TekCoreItems {
-		RIS("Ris", "ItemRis");
+		
+		
+		
+
+		//Mats
+		RIS("Ris", "ItemRis"),
+		SINGOT("singot", "Itemsingot"),
+		
+		//Tools
+		SPICK("spick", "Itemspick"),
+		SAXE("saxe", "Itemsaxe"),
+		SHOE("shoe", "Itemshoe"),
+		SSPADE("sspade", "Itemsspade"),
+		SSWORD("ssword", "Itemssword");
+		
+		
 		
 		private String unlocalizedName;
 		private String registryName;
@@ -30,6 +45,7 @@ public class Reference {
 	}
 	public static enum TekCoreBlocks {
 		SAPPHIREORE("sapphireore", "BlockSO");
+		
 		private String unlocalizedName;
 		private String registryName;
 		
