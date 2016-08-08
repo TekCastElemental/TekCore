@@ -1,5 +1,7 @@
 package com.teklitesoftware.tekcore.init;
 
+import java.util.ArrayList;
+
 import com.teklitesoftware.tekcore.Reference;
 import com.teklitesoftware.tekcore.items.ItemRis;
 import com.teklitesoftware.tekcore.items.ItemSapphireArmor;
@@ -24,11 +26,11 @@ import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModItems {
-
+	public static ArrayList<Item> m_items = new ArrayList<Item>();
 	public static ToolMaterial TOOL_SAPPHIRE = EnumHelper.addToolMaterial("sapphire", 2, 1000, 7.0F, 2.5F, 12);
 	public static ArmorMaterial ARMOR_SAPPHIRE = EnumHelper.addArmorMaterial("aSapphire", "tekcore:sapphireArmor", 24, new int[] { 2, 7, 4, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
 	
-	//Mats
+/*	//Mats
 	public static Item Ris;
 	public static Item singot;
 	
@@ -144,20 +146,34 @@ public class ModItems {
 	public static Item bdohspade;
 	public static Item bdohsword;
 	public static Item bdohpick;
-	public static Item bdohhoe;
-
-	
-	
+	public static Item bdohhoe; 
 	//Armor
 	public static Item sapphireHelmet;
 	public static Item sapphireChestplate;
 	public static Item sapphireLeggings;
 	public static Item sapphireBoots;
+	*/
+
+	public enum ItemIndex{
+		   Ris,
+		   singot,
+		   spick,
+		   saxe,
+		   shoe,
+		   sspade,
+		   ssword,
+		   sapphireHelmet,
+		   sapphireChestplate,
+		   sapphireLeggings,
+		   sapphireBoots
+		}
+	
+
+	
 	
 
 	public static void init() {
-		
-		//Armor
+		/* //Armor
 		sapphireHelmet = new ItemSapphireArmor("sapphireHelmet", EntityEquipmentSlot.HEAD);
 		sapphireChestplate = new ItemSapphireArmor("sapphireChestplate", EntityEquipmentSlot.CHEST);
 		sapphireLeggings = new ItemSapphireArmor("sapphireLeggings", EntityEquipmentSlot.LEGS);
@@ -172,12 +188,31 @@ public class ModItems {
 		saxe = new Itemsaxe(TOOL_SAPPHIRE, 3, 7.0F);
 		shoe = new Itemshoe(TOOL_SAPPHIRE);
 		sspade = new Itemsspade(TOOL_SAPPHIRE);
-		ssword = new Itemssword(TOOL_SAPPHIRE);
+		ssword = new Itemssword(TOOL_SAPPHIRE); */
+		
+		m_items.add(new ItemRis());
+		m_items.add(new Itemsingot());
+		
+		m_items.add(new Itemspick(TOOL_SAPPHIRE));
+		m_items.add(new Itemsaxe(TOOL_SAPPHIRE, 3, 7.0F));
+		m_items.add(new Itemshoe(TOOL_SAPPHIRE));
+		m_items.add(new Itemsspade(TOOL_SAPPHIRE));
+		m_items.add(new Itemssword(TOOL_SAPPHIRE));
+		
+		m_items.add(new ItemSapphireArmor("sapphireHelmet", EntityEquipmentSlot.HEAD));
+		m_items.add(new ItemSapphireArmor("sapphireChestplate", EntityEquipmentSlot.CHEST));
+		m_items.add(new ItemSapphireArmor("sapphireLeggings", EntityEquipmentSlot.LEGS));
+		m_items.add(new ItemSapphireArmor("sapphireBoots", EntityEquipmentSlot.FEET));
+		
+
 
 	}
 
 	public static void register() {
-		GameRegistry.register(Ris);
+	    for(Item i : m_items)
+	        GameRegistry.register(i);
+	    
+		/* GameRegistry.register(Ris);
 		GameRegistry.register(singot);
 		GameRegistry.register(spick);
 		GameRegistry.register(saxe);
@@ -187,11 +222,15 @@ public class ModItems {
 		GameRegistry.register(sapphireHelmet);
 		GameRegistry.register(sapphireChestplate);
 		GameRegistry.register(sapphireLeggings);
-		GameRegistry.register(sapphireBoots);
+		GameRegistry.register(sapphireBoots); */
 	}
 
 	public static void registerRenders() {
-		registerRender(Ris);
+		
+		  for(Item i : m_items)
+		        registerRender(i);
+		
+		/* registerRender(Ris);
 		registerRender(singot);
 		registerRender(spick);
 		registerRender(saxe);
@@ -201,7 +240,7 @@ public class ModItems {
 		registerRender(sapphireHelmet);
 		registerRender(sapphireChestplate);
 		registerRender(sapphireLeggings);
-		registerRender(sapphireBoots);
+		registerRender(sapphireBoots); */
 
 	}
 

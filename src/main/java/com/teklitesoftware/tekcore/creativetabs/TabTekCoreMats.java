@@ -15,6 +15,6 @@ public class TabTekCoreMats extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		
-		return ModItems.Ris;
+		return ModItems.m_items.get(ModItems.ItemIndex.Ris.ordinal());
 	}
 }

@@ -7,7 +7,7 @@
   "mcversion": "${mcversion}",
   "url": "http://www.TekLiteSoftware.com",
   "updateUrl": "",
-  "authorList": ["ElementalBlades"],
+  "authorList": ["ElementalBlades", "DeathDev"],
   "logoFile": "assets/tekcore/mcmod/tekcore.png",
   "screenshots": [],
   "dependencies": []

@@ -15,7 +15,7 @@ public class TabTekCoreTools extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		
-		return ModItems.spick;
+		return ModItems.m_items.get(ModItems.ItemIndex.spick.ordinal());
 	}
 
 }
