@@ -41,7 +41,7 @@ public class SapphireGeneration implements IWorldGenerator {
 	}
 
 	public void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
-		for (int k = 0; k < 6; k++) {
+		for (int k = 0; k < 5; k++) {
 			int firstBlockXCoord = chunkX + rand.nextInt(16);
 			int firstBlockZCoord = chunkZ + rand.nextInt(16);
 			// Will be found between y = 0 and y = 20

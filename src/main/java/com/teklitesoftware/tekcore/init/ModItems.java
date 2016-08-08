@@ -57,7 +57,7 @@ public class ModItems {
 	public static Item bsspade;
 	public static Item bssword;
 	
-	//Obsidian Headed Sapphire Tools (Dyes included)
+	//Obsidian Headed Sapphire Tools 
 	public static Item ohspick;
 	public static Item ohsaxe;
 	public static Item ohshoe;
@@ -96,7 +96,7 @@ public class ModItems {
 	public static Item ohiipick;
 	public static Item ohiihoe;
 	
-	//Reinforced Diamond Tools (Dyes included)
+	//Reinforced Diamond Tools
 	//Reinforced Diamond
 	public static Item iidaxe;
 	public static Item iidspade;
@@ -104,23 +104,23 @@ public class ModItems {
 	public static Item iidpick;
 	public static Item iidhoe;
 	//Red Reinforced Diamond
-	public static Item riidaxe;
-	public static Item riidspade;
-	public static Item riidsword;
-	public static Item riidpick;
-	public static Item riidhoe;
+	public static Item rdaxe;
+	public static Item rdspade;
+	public static Item rdsword;
+	public static Item rdpick;
+	public static Item rdhoe;
 	//Green Reinforced Diamond
-	public static Item giidaxe;
-	public static Item giidspade;
-	public static Item giidsword;
-	public static Item giidpick;
-	public static Item giidhoe;
+	public static Item gdaxe;
+	public static Item gdspade;
+	public static Item gdsword;
+	public static Item gdpick;
+	public static Item gdhoe;
 	//Blue Reinforced Diamond
-	public static Item biidaxe;
-	public static Item biidspade;
-	public static Item biidsword;
-	public static Item biidpick;
-	public static Item biidhoe;
+	public static Item bdaxe;
+	public static Item bdspade;
+	public static Item bdsword;
+	public static Item bdpick;
+	public static Item bdhoe;
 	//Obsidian Headed Diamond
 	public static Item dohaxe;
 	public static Item dohspade;
