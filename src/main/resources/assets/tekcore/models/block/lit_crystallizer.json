@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "tekcore:blocks/copper_furnace_top",
+        "front": "tekcore:blocks/copper_furnace_front_on",
+        "side": "tekcore:blocks/copper_furnace_side"
+    }
+}

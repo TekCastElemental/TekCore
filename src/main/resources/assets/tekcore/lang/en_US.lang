@@ -6,11 +6,44 @@ item.saxe.name=Sapphire Axe
 item.sspade.name=Sapphire Spade
 item.shoe.name=Sapphire Hoe
 item.ssword.name=Sapphire Sword
+
+item.ohspick.name=Obsidian Headed Sapphire Pickaxe
+item.ohsaxe.name=Obsidian Headed Sapphire Axe
+item.ohsspade.name=Obsidian Headed Sapphire Spade
+item.ohshoe.name=Obsidian Headed Sapphire Hoe
+item.ohssword.name=Obsidian Headed Sapphire Sword
+
 item.tekcore:sapphireHelmet.name=Sapphire Helmet
 item.tekcore:sapphireChestplate.name=Sapphire Chestplate
 item.tekcore:sapphireLeggings.name=Sapphire Leggings
 item.tekcore:sapphireBoots.name=Sapphire Boots
+
+item.ohiaxe.name=Obsidian Headed Iron Axe
+item.ohipick.name=Obsidian Headed Iron Pickaxe
+item.ohisword.name=Obsidian Headed Iron Sword
+item.ohihoe.name=Obsidian Headed Iron Hoe
+item.ohispade.name=Obsidian Headed Iron Spade
+
+item.iiaxe.name=Reinforced Iron Axe
+item.iipick.name=Reinforced Iron Pickaxe
+item.iisword.name=Reinforced Iron Sword
+item.iihoe.name=Reinforced Iron Hoe
+item.iispade.name=Reinforced Iron Spade
+
+item.iidaxe.name=Reinforced Diamond Axe
+item.iidpick.name=Reinforced Diamond Pickaxe
+item.iidsword.name=Reinforced Diamond Sword
+item.iidhoe.name=Reinforced Diamond Hoe
+item.iidspade.name=Reinforced Diamond Spade
+
+item.dohaxe.name=Obsidian Headed Diamond Axe
+item.dohpick.name=Obsidian Headed Diamond Pickaxe
+item.dohsword.name=Obsidian Headed Diamond Sword
+item.dohhoe.name=Obsidian Headed Diamond Hoe
+item.dohspade.name=Obsidian Headed Diamond Spade
+
 tile.sapphireore.name=Sapphire Ore
+
 
 itemGroup.tabTCT=TekCore Tools
 itemGroup.tabTCM=TekCore Materials & Equipment

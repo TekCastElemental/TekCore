@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "tekcore:blocks/sapphireore",
+        "front": "tekcore:blocks/sapphireore",
+        "side": "tekcore:blocks/sapphireore"
+    }
+}

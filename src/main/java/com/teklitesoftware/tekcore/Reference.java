@@ -19,13 +19,46 @@ public class Reference {
 		SINGOT("singot", "Itemsingot"),
 		
 		//Tools
+		//base sapphire
 		SPICK("spick", "Itemspick"),
 		SAXE("saxe", "Itemsaxe"),
 		SHOE("shoe", "Itemshoe"),
 		SSPADE("sspade", "Itemsspade"),
-		SSWORD("ssword", "Itemssword");
+		SSWORD("ssword", "Itemssword"),
 		
+		//OH Sapphire
+		OHSPICK("ohspick", "Itemohspick"),
+		OHSAXE("ohsaxe", "Itemohsaxe"),
+		OHSHOE("ohshoe", "Itemohshoe"),
+		OHSSPADE("ohsspade", "Itemohsspade"),
+		OHSSWORD("ohssword", "Itemohssword"),
 		
+		//iiron
+		IIAXE("iiaxe", "Itemiiaxe"),
+		IISPADE("iispade", "Itemiispade"),
+		IISWORD("iisword", "Itemiisword"),
+		IIHOE("iihoe", "Itemiihoe"),
+		IIPICK("iipick", "Itemiipick"),
+		
+		//ohi iron
+		OHIAXE("ohiaxe", "Itemohiaxe"),
+		OHISPADE("ohispade", "Itemohispade"),
+		OHISWORD("ohisword", "Itemohisword"),
+		OHIHOE("ohihoe", "Itemohihoe"),
+		OHIPICK("ohipick", "Itemohipick"),
+		
+		//II diamond
+		IIDAXE("iidaxe", "Itemiidaxe"),
+		IIDSPADE("iidspade", "Itemiidspade"),
+		IIDSWORD("iidsword", "Itemiidsword"),
+		IIDHOE("iidhoe", "Itemiidhoe"),
+		IIDPICK("iidpick", "Itemiidpick"),
+		
+		DOHAXE("dohaxe", "Itemdohaxe"),
+		DOHSPADE("dohspade", "Itemdohspade"),
+		DOHSWORD("dohsword", "Itemdohsword"),
+		DOHHOE("dohhoe", "Itemdohhoe"),
+		DOHPICK("dohpick", "Itemdohpick");
 		
 		private String unlocalizedName;
 		private String registryName;
@@ -44,7 +77,9 @@ public class Reference {
 		}
 	}
 	public static enum TekCoreBlocks {
-		SAPPHIREORE("sapphireore", "BlockSO");
+		SAPPHIREORE("sapphireore", "BlockSO"),
+		CRYSTALLIZER("crystallizer", "BlockCrystallizer"),
+		LIT_CRYSTALLIZER("lit_crystallizer", "BlockCrystallizer");
 		
 		private String unlocalizedName;
 		private String registryName;
