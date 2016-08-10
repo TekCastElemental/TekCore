@@ -3,6 +3,7 @@ package com.teklitesoftware.tekcore;
 import com.teklitesoftware.tekcore.creativetabs.TabTekCoreMats;
 import com.teklitesoftware.tekcore.creativetabs.TabTekCoreTools;
 import com.teklitesoftware.tekcore.handlers.CGuiHandler;
+import com.teklitesoftware.tekcore.handlers.FuelHandler;
 import com.teklitesoftware.tekcore.init.ModBlocks;
 import com.teklitesoftware.tekcore.init.ModCrafting;
 import com.teklitesoftware.tekcore.init.ModItems;
@@ -44,20 +45,24 @@ public class TCengine {
 		ModItems.register();
 		ModBlocks.init();
 		ModBlocks.register();
+		GameRegistry.registerFuelHandler(new FuelHandler());
 		
 		// Call Renders client-side.
 		proxy.init();
 
 		// Sapphire Ore Spawns here.
 		GameRegistry.registerWorldGenerator(new SapphireGeneration(), 2);
-
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, guihandler);
+		
+		
 	}
 
 	@EventHandler
 	public void Init(FMLInitializationEvent event) {
 		System.out.println("Init");
 		ModCrafting.register();
-		NetworkRegistry.INSTANCE.registerGuiHandler(this, guihandler);
+		
+		
 
 	}
 

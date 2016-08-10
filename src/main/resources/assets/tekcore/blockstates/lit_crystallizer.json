@@ -1,8 +1,8 @@
 {
     "variants": {
-        "facing=north": { "model": "tekcore:lit_copper_furnace" },
-        "facing=south": { "model": "tekcore:lit_copper_furnace", "y": 180 },
-        "facing=west":  { "model": "tekcore:lit_copper_furnace", "y": 270 },
-        "facing=east":  { "model": "tekcore:lit_copper_furnace", "y": 90 }
+        "facing=north": { "model": "tekcore:lit_crystallizer" },
+        "facing=south": { "model": "tekcore:lit_crystallizer", "y": 180 },
+        "facing=west":  { "model": "tekcore:lit_crystallizer", "y": 270 },
+        "facing=east":  { "model": "tekcore:lit_crystallizer", "y": 90 }
     }
 }

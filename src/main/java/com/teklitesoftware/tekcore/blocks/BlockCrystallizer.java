@@ -12,6 +12,7 @@ import com.teklitesoftware.tekcore.init.ModBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
+import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -44,19 +45,19 @@ import net.minecraftforge.fml.common.network.internal.FMLNetworkHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockCrystallizer extends Block implements ITileEntityProvider{
+public class BlockCrystallizer extends BlockContainer implements ITileEntityProvider{
 private final boolean isBurning;
+private static boolean keepInventory;
 	
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
 	public BlockCrystallizer(String name, boolean isBurning) {
-		super(Material.IRON);
+		super(Material.ROCK);
 		this.isBurning = isBurning;
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		
-		if(!name.contains("lit")) this.setCreativeTab(TCengine.mats);// this.setRegistryName(Reference.TekCoreBlocks.CRYSTALLIZER.getRegistryName());
+		if(!name.contains("lit")) this.setCreativeTab(TCengine.mats);
 	}
 	
 	@Override
@@ -68,30 +69,33 @@ private final boolean isBurning;
     {
         if (!worldIn.isRemote)
         {
-            IBlockState iblockstate = worldIn.getBlockState(pos.north());
-            IBlockState iblockstate1 = worldIn.getBlockState(pos.south());
-            IBlockState iblockstate2 = worldIn.getBlockState(pos.west());
-            IBlockState iblockstate3 = worldIn.getBlockState(pos.east());
-            EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
+            if (!worldIn.isRemote)
+            {
+                IBlockState iblockstate = worldIn.getBlockState(pos.north());
+                IBlockState iblockstate1 = worldIn.getBlockState(pos.south());
+                IBlockState iblockstate2 = worldIn.getBlockState(pos.west());
+                IBlockState iblockstate3 = worldIn.getBlockState(pos.east());
+                EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
 
-            if (enumfacing == EnumFacing.NORTH && iblockstate.isFullBlock() && !iblockstate1.isFullBlock())
-            {
-                enumfacing = EnumFacing.SOUTH;
-            }
-            else if (enumfacing == EnumFacing.SOUTH && iblockstate1.isFullBlock() && !iblockstate.isFullBlock())
-            {
-                enumfacing = EnumFacing.NORTH;
-            }
-            else if (enumfacing == EnumFacing.WEST && iblockstate2.isFullBlock() && !iblockstate3.isFullBlock())
-            {
-                enumfacing = EnumFacing.EAST;
-            }
-            else if (enumfacing == EnumFacing.EAST && iblockstate3.isFullBlock() && !iblockstate2.isFullBlock())
-            {
-                enumfacing = EnumFacing.WEST;
-            }
+                if (enumfacing == EnumFacing.NORTH && iblockstate.isFullBlock() && !iblockstate1.isFullBlock())
+                {
+                    enumfacing = EnumFacing.SOUTH;
+                }
+                else if (enumfacing == EnumFacing.SOUTH && iblockstate1.isFullBlock() && !iblockstate.isFullBlock())
+                {
+                    enumfacing = EnumFacing.NORTH;
+                }
+                else if (enumfacing == EnumFacing.WEST && iblockstate2.isFullBlock() && !iblockstate3.isFullBlock())
+                {
+                    enumfacing = EnumFacing.EAST;
+                }
+                else if (enumfacing == EnumFacing.EAST && iblockstate3.isFullBlock() && !iblockstate2.isFullBlock())
+                {
+                    enumfacing = EnumFacing.WEST;
+                }
 
-            worldIn.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
+                worldIn.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
+            }
         }
     }
 	
@@ -134,10 +138,13 @@ private final boolean isBurning;
         }
     }
 	
-	public static void setState(boolean active, World worldIn, BlockPos pos)
+	
+
+    public static void setState(boolean active, World worldIn, BlockPos pos)
     {
         IBlockState iblockstate = worldIn.getBlockState(pos);
         TileEntity tileentity = worldIn.getTileEntity(pos);
+        keepInventory = true;
 
         if (active)
         {
@@ -150,6 +157,8 @@ private final boolean isBurning;
             worldIn.setBlockState(pos, ModBlocks.Crystallizer.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
 
+        keepInventory = false;
+
         if (tileentity != null)
         {
             tileentity.validate();
@@ -161,11 +170,13 @@ private final boolean isBurning;
 	public TileEntity createTileEntity(World world, IBlockState state) {
 		return new TileEntityCrystallizer();
 	}
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-		
-		System.out.println("TekCore Attempting GUI open");
+	
+	
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+		if(!worldIn.isRemote) {
 			playerIn.openGui(TCengine.instance, CGuiHandler.CRYSTALLIZER, worldIn, pos.getX(), pos.getY(), pos.getZ());
-		
+		}
 		return true;
 	}
 	
@@ -223,8 +234,9 @@ private final boolean isBurning;
 		return new TileEntityCrystallizer();
 	}
 	
-	public int getRenderType() {
-		return 3;
-	}
+	@Override
+	public EnumBlockRenderType getRenderType(IBlockState state) {
+		return EnumBlockRenderType.MODEL;
+}
 
 }

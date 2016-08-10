@@ -1,9 +1,9 @@
 
 {
     "variants": {
-        "facing=north": { "model": "tekcore:sapphireore" },
-        "facing=south": { "model": "tekcore:sapphireore", "y": 180 },
-        "facing=west":  { "model": "tekcore:sapphireore", "y": 270 },
-        "facing=east":  { "model": "tekcore:sapphireore", "y": 90 }
+        "facing=north": { "model": "tekcore:crystallizer" },
+        "facing=south": { "model": "tekcore:crystallizer", "y": 180 },
+        "facing=west":  { "model": "tekcore:crystallizer", "y": 270 },
+        "facing=east":  { "model": "tekcore:crystallizer", "y": 90 }
     }
 }
