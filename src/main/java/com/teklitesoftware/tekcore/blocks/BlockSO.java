@@ -3,6 +3,7 @@ package com.teklitesoftware.tekcore.blocks;
 
 
 import com.teklitesoftware.tekcore.Reference;
+import com.teklitesoftware.tekcore.TCengine;
 import com.teklitesoftware.tekcore.init.ModBlocks;
 
 import net.minecraft.block.Block;
@@ -17,7 +18,7 @@ public class BlockSO extends Block {
 		super(Material.ROCK);
 		setUnlocalizedName(Reference.TekCoreBlocks.SAPPHIREORE.getUnlocalizedName());
 		setRegistryName(Reference.TekCoreBlocks.SAPPHIREORE.getRegistryName());
-		this.setCreativeTab(CreativeTabs.MISC);
+		this.setCreativeTab(TCengine.blocks);
 		this.setHardness(3);
 		setResistance(15F);
 		setHarvestLevel("pickaxe", 2);

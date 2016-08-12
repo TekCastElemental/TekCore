@@ -97,4 +97,23 @@ public class Reference {
 			return registryName;
 		}
 	}
+	public static enum TCbiomes {
+		SPIRIT("spirit", "BiomeSpirit");
+		
+		private String unlocalizedName;
+		private String registryName;
+		
+		TCbiomes(String unlocalizedName, String registryName) {
+			this.unlocalizedName = unlocalizedName;
+			this.registryName = registryName;
+		}
+		
+		public String getUnlocalizedName() {
+			return unlocalizedName;
+		}
+		
+		public String getRegistryName() {
+			return registryName;
+		}
+	}
 }

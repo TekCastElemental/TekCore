@@ -37,7 +37,7 @@ public class ModBlocks {
 		GameRegistry.register(new ItemBlock(sapphireore).setRegistryName(sapphireore.getRegistryName()));
 		registerBlock(Crystallizer);
 		registerBlock(Lit_Crystallizer);
-		GameRegistry.registerTileEntity(TileEntityCrystallizer.class, "TileEntityCrystallizer");
+		
 	}
 	public static void registerBlock(Block block) {
 		GameRegistry.register(block);

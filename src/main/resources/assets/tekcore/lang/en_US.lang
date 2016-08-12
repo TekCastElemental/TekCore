@@ -43,7 +43,9 @@ item.dohhoe.name=Obsidian Headed Diamond Hoe
 item.dohspade.name=Obsidian Headed Diamond Spade
 
 tile.sapphireore.name=Sapphire Ore
+tile.crystallizer.name=Crystallizer
 
 
 itemGroup.tabTCT=TekCore Tools
 itemGroup.tabTCM=TekCore Materials & Equipment
+itemGroup.tabTCB=TekCore Blocks

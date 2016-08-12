@@ -57,7 +57,7 @@ private static boolean keepInventory;
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		if(!name.contains("lit")) this.setCreativeTab(TCengine.mats);
+		if(!name.contains("lit")) this.setCreativeTab(TCengine.blocks);
 	}
 	
 	@Override
@@ -139,8 +139,7 @@ private static boolean keepInventory;
     }
 	
 	
-
-    public static void setState(boolean active, World worldIn, BlockPos pos)
+public static void setState(boolean active, World worldIn, BlockPos pos)
     {
         IBlockState iblockstate = worldIn.getBlockState(pos);
         TileEntity tileentity = worldIn.getTileEntity(pos);

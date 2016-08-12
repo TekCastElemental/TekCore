@@ -223,9 +223,79 @@ public class ModItems {
 		   dohspade,
 		   dohsword,
 		   dohpick,
-		   dohhoe
+		   dohhoe,
 		   
-		   		   
+		   rdaxe,
+		   rdspade,
+		   rdsword,
+		   rdpick,
+		   rdhoe,
+		   
+		   gdaxe,
+		   gdspade,
+		   gdsword,
+		   gdpick,
+		   gdhoe,
+		   
+		   bdaxe,
+		   bdspade,
+		   bdsword,
+		   bdpick,
+		   bdhoe,
+		   
+		   rdohaxe,
+		   rdohspade,
+		   rdohsword,
+		   rdohpick,
+		   rdohhoe,
+		   
+		   gdohaxe,
+		   gdohspade,
+		   gdohsword,
+		   gdohpick,
+		   gdohhoe,
+		   
+		   bdohaxe,
+		   bdohspade,
+		   bdohsword,
+		   bdohpick,
+		   bdohhoe,
+		   
+		   rsaxe,
+		   rsspade,
+		   rssword,
+		   rspick,
+		   rshoe,
+		   
+		   gsaxe,
+		   gsspade,
+		   gssword,
+		   gspick,
+		   gshoe,	
+		   
+		   bsaxe,
+		   bsspade,
+		   bssword,
+		   bspick,
+		   bshoe,
+		   
+		   rohsaxe,
+		   rohsspade,
+		   rohssword,
+		   rohspick,
+		   rohshoe,
+		   
+		   gohsaxe,
+		   gohsspade,
+		   gohssword,
+		   gohspick,
+		   gohshoe,
+		   
+		   bohsaxe,
+		   bohsspade,
+		   bohssword,
+		   bohspick,
+		   bohshoe,
 		}
 	
 
@@ -278,6 +348,79 @@ public class ModItems {
 		m_items.add(new Itemdohpick(OHDIAMOND));
 		m_items.add(new Itemdohhoe(OHDIAMOND));
 		
+	/*	m_items.add(new Itemrdaxe(IDIAMOND, 3, 8.0F));
+		m_items.add(new Itemrdspade(IDIAMOND));
+		m_items.add(new Itemrdsword(IDIAMOND));
+		m_items.add(new Itemrdpick(IDIAMOND));
+		m_items.add(new Itemrdhoe(IDIAMOND));
+		
+		m_items.add(new Itemgdaxe(IDIAMOND, 3, 8.0F));
+		m_items.add(new Itemgdspade(IDIAMOND));
+		m_items.add(new Itemgdsword(IDIAMOND));
+		m_items.add(new Itemgdpick(IDIAMOND));
+		m_items.add(new Itemgdhoe(IDIAMOND));
+		
+		m_items.add(new Itembdaxe(IDIAMOND, 3, 8.0F));
+		m_items.add(new Itembdspade(IDIAMOND));
+		m_items.add(new Itembdsword(IDIAMOND));
+		m_items.add(new Itembdpick(IDIAMOND));
+		m_items.add(new Itembdhoe(IDIAMOND));
+		
+		m_items.add(new Itemrdohaxe(OHDIAMOND, 3, 8.0F));
+		m_items.add(new Itemrdohspade(OHDIAMOND));
+		m_items.add(new Itemrdohsword(OHDIAMOND));
+		m_items.add(new Itemrdohpick(OHDIAMOND));
+		m_items.add(new Itemrdohhoe(OHDIAMOND));
+		
+		m_items.add(new Itemgdohaxe(OHDIAMOND, 3, 8.0F));
+		m_items.add(new Itemgdohspade(OHDIAMOND));
+		m_items.add(new Itemgdohsword(OHDIAMOND));
+		m_items.add(new Itemgdohpick(OHDIAMOND));
+		m_items.add(new Itemgdohhoe(OHDIAMOND));
+		
+		m_items.add(new Itembdohaxe(OHDIAMOND, 3, 8.0F));
+		m_items.add(new Itembdohspade(OHDIAMOND));
+		m_items.add(new Itembdohsword(OHDIAMOND));
+		m_items.add(new Itembdohpick(OHDIAMOND));
+		m_items.add(new Itembdohhoe(OHDIAMOND));
+		
+		m_items.add(new Itemrsaxe(TOOL_SAPPHIRE, 3, 7.0F));
+		m_items.add(new Itemrsspade(TOOL_SAPPHIRE));
+		m_items.add(new Itemrssword(TOOL_SAPPHIRE));
+		m_items.add(new Itemrspick(TOOL_SAPPHIRE));
+		m_items.add(new Itemrshoe(TOOL_SAPPHIRE));
+		
+		m_items.add(new Itemgsaxe(TOOL_SAPPHIRE, 3, 7.0F));
+		m_items.add(new Itemgsspade(TOOL_SAPPHIRE));
+		m_items.add(new Itemgssword(TOOL_SAPPHIRE));
+		m_items.add(new Itemgspick(TOOL_SAPPHIRE));
+		m_items.add(new Itemgshoe(TOOL_SAPPHIRE));
+		
+		m_items.add(new Itembsaxe(TOOL_SAPPHIRE, 3, 7.0F));
+		m_items.add(new Itembsspade(TOOL_SAPPHIRE));
+		m_items.add(new Itembssword(TOOL_SAPPHIRE));
+		m_items.add(new Itembspick(TOOL_SAPPHIRE));
+		m_items.add(new Itembshoe(TOOL_SAPPHIRE));
+		
+		m_items.add(new Itemrohsaxe(OHSAPPHIRE, 2, 7.0F));
+		m_items.add(new Itemrohsspade(OHSAPPHIRE));
+		m_items.add(new Itemrohssword(OHSAPPHIRE));
+		m_items.add(new Itemrohspick(OHSAPPHIRE));
+		m_items.add(new Itemrohshoe(OHSAPPHIRE));
+		
+		m_items.add(new Itemgohsaxe(OHSAPPHIRE, 2, 7.0F));
+		m_items.add(new Itemgohsspade(OHSAPPHIRE));
+		m_items.add(new Itemgohssword(OHSAPPHIRE));
+		m_items.add(new Itemgohspick(OHSAPPHIRE));
+		m_items.add(new Itemgohshoe(OHSAPPHIRE));
+		
+		m_items.add(new Itembohsaxe(OHSAPPHIRE, 2, 7.0F));
+		m_items.add(new Itembohsspade(OHSAPPHIRE));
+		m_items.add(new Itembohssword(OHSAPPHIRE));
+		m_items.add(new Itembohspick(OHSAPPHIRE));
+		m_items.add(new Itembohshoe(OHSAPPHIRE)); */
+		
+
 
 
 	}

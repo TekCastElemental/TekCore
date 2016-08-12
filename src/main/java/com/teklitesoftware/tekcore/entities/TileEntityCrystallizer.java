@@ -2,7 +2,7 @@ package com.teklitesoftware.tekcore.entities;
 
 import javax.annotation.Nullable;
 import com.teklitesoftware.tekcore.blocks.BlockCrystallizer;
-import com.teklitesoftware.tekcore.init.CrystallizerRecipes;
+import com.teklitesoftware.tekcore.crafting.CrystallizerRecipes;
 import com.teklitesoftware.tekcore.init.ModBlocks;
 
 import net.minecraft.block.Block;
@@ -26,6 +26,7 @@ import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
@@ -44,7 +45,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class TileEntityCrystallizer extends TileEntityFurnace implements IInventory, ISidedInventory, ITickable {
+public class TileEntityCrystallizer extends TileEntityFurnace implements IInventory, ITickable {
 	  private static final int[] slotsTop = new int[] {0};
 	    private static final int[] slotsBottom = new int[] {2, 1};
 	    private static final int[] slotsSides = new int[] {1};
@@ -77,32 +78,10 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	    /**
 	     * Removes up to a specified number of items from an inventory slot and returns them in a new stack.
 	     */
+
 	    public ItemStack decrStackSize(int index, int count)
 	    {
-	        if (this.furnaceItemStacks[index] != null)
-	        {
-	            if (this.furnaceItemStacks[index].stackSize <= count)
-	            {
-	                ItemStack itemstack1 = this.furnaceItemStacks[index];
-	                this.furnaceItemStacks[index] = null;
-	                return itemstack1;
-	            }
-	            else
-	            {
-	                ItemStack itemstack = this.furnaceItemStacks[index].splitStack(count);
-
-	                if (this.furnaceItemStacks[index].stackSize == 0)
-	                {
-	                    this.furnaceItemStacks[index] = null;
-	                }
-
-	                return itemstack;
-	            }
-	        }
-	        else
-	        {
-	            return null;
-	        }
+	    	 return ItemStackHelper.getAndSplit(this.furnaceItemStacks, index, count);
 	    }
 
 	    /**
@@ -110,16 +89,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	     */
 	    public ItemStack removeStackFromSlot(int index)
 	    {
-	        if (this.furnaceItemStacks[index] != null)
-	        {
-	            ItemStack itemstack = this.furnaceItemStacks[index];
-	            this.furnaceItemStacks[index] = null;
-	            return itemstack;
-	        }
-	        else
-	        {
-	            return null;
-	        }
+	    	return ItemStackHelper.getAndRemove(this.furnaceItemStacks, index);
 	    }
 
 	    /**
@@ -140,15 +110,16 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	            this.totalCookTime = this.getCookTime(stack);
 	            this.cookTime = 0;
 	            this.markDirty();
-	        }
+	        } 
+	    	
 	    }
 	    
-	    @Override
+	   /* @Override
 	    public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newState) {
 
 	        return newState != ModBlocks.Crystallizer && newState != ModBlocks.Lit_Crystallizer;
 
-	    }
+	    } */
 
 	    /**
 	     * Get the name of this object. For players this returns their username
@@ -170,7 +141,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	    {
 	        this.furnaceCustomName = customName;
 	    }
-
+	    @Override
 	    public void readFromNBT(NBTTagCompound compound)
 	    {
 	        super.readFromNBT(compound);
@@ -188,17 +159,17 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	            }
 	        }
 
-	        this.furnaceBurnTime = compound.getShort("BurnTime");
-	        this.cookTime = compound.getShort("CookTime");
-	        this.totalCookTime = compound.getShort("CookTimeTotal");
+	        this.furnaceBurnTime = compound.getInteger("BurnTime");
+	        this.cookTime = compound.getInteger("CookTime");
+	        this.totalCookTime = compound.getInteger("CookTimeTotal");
 	        this.currentItemBurnTime = getItemBurnTime(this.furnaceItemStacks[1]);
 
-	        if (compound.hasKey("CustomName", 8))
+	        if (compound.hasKey("comcrystallizer", 8))
 	        {
-	            this.furnaceCustomName = compound.getString("CustomName");
+	            this.furnaceCustomName = compound.getString("comcrystallizer");
 	        }
 	    }
-	    
+	    @Override
 	    public NBTTagCompound writeToNBT(NBTTagCompound compound)
 	    {
 	        super.writeToNBT(compound);
@@ -222,7 +193,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 
 	        if (this.hasCustomName())
 	        {
-	            compound.setString("CustomName", this.furnaceCustomName);
+	            compound.setString("comcrystallizer", this.furnaceCustomName);
 	        }
 
 	        return compound;
@@ -254,6 +225,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	    /**
 	     * Like the old updateEntity(), except more generic.
 	     */
+	    @Override
 	    public void update()
 	    {
 	        boolean flag = this.isBurning();
@@ -331,6 +303,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	    /**
 	     * Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
 	     */
+	    
 	    private boolean canSmelt()
 	    {
 	        if (this.furnaceItemStacks[0] == null)
@@ -339,7 +312,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	        }
 	        else
 	        {
-	            ItemStack itemstack = CrystallizerRecipes.instance().getSmeltingResult(this.furnaceItemStacks[0]);
+	            ItemStack itemstack = FurnaceRecipes.instance().getSmeltingResult(this.furnaceItemStacks[0]);
 	            if (itemstack == null) return false;
 	            if (this.furnaceItemStacks[2] == null) return true;
 	            if (!this.furnaceItemStacks[2].isItemEqual(itemstack)) return false;
