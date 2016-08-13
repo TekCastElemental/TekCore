@@ -98,8 +98,9 @@ public class Reference {
 		}
 	}
 	public static enum TCbiomes {
-		SPIRIT("spirit", "BiomeSpirit");
-		
+		SPIRIT("spirit", "BiomeSpirit"),
+		FROZEN("frozen", "BiomeFrozenPlains"),
+		BURNT("burnt", "BiomeBurntScar");
 		private String unlocalizedName;
 		private String registryName;
 		

@@ -2,6 +2,8 @@ package com.teklitesoftware.tekcore.init;
 
 import com.google.common.collect.Lists;
 import com.teklitesoftware.tekcore.Reference;
+import com.teklitesoftware.tekcore.biomes.BiomeBurntScar;
+import com.teklitesoftware.tekcore.biomes.BiomeFrozenPlains;
 import com.teklitesoftware.tekcore.biomes.BiomeSpirit;
 import com.teklitesoftware.tekcore.biomes.BiomeSpirit.Type;
 
@@ -30,13 +32,28 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModBiomes {
 
 	public static Biome biomeSpirit;
+	public static Biome biomefrozenPlains;
+	public static Biome biomeBurntScar;
 	
 	public static void registerBiomes() {
-		biomeSpirit = new BiomeSpirit(com.teklitesoftware.tekcore.biomes.BiomeSpirit.Type.ROOFED, new BiomeProperties("Spirit Woods").setRainfall(1.0F).setTemperature(0.5F));
+		biomeSpirit = new BiomeSpirit(com.teklitesoftware.tekcore.biomes.BiomeSpirit.Type.ROOFED, new BiomeProperties("Spirit Woods").setRainfall(1.0F).setTemperature(0.5F).setBaseHeight(0.5F).setHeightVariation(0.1F));
+		biomefrozenPlains = new BiomeFrozenPlains(BiomeFrozenPlains.Type.NORMAL, new BiomeProperties("Frozen Plains").setRainfall(1.0F).setTemperature(0F).setBaseHeight(0.5F).setHeightVariation(0F));
+		biomeBurntScar = new BiomeBurntScar(BiomeBurntScar.Type.NORMAL, new BiomeProperties("Burnt Scar").setRainfall(0F).setTemperature(1.5F).setBaseHeight(0.5F).setHeightVariation(0F));
+		
+		GameRegistry.register(biomefrozenPlains);
+		BiomeDictionary.registerBiomeType(biomefrozenPlains, BiomeDictionary.Type.COLD);
+		BiomeManager.addBiome(BiomeType.COOL, new BiomeManager.BiomeEntry(biomefrozenPlains, 6));
+		BiomeManager.addSpawnBiome(biomefrozenPlains);
+		
 		GameRegistry.register(biomeSpirit);
 		BiomeDictionary.registerBiomeType(biomeSpirit, BiomeDictionary.Type.LUSH);
-		BiomeManager.addBiome(BiomeType.COOL, new BiomeManager.BiomeEntry(biomeSpirit, 999));
-		BiomeManager.addSpawnBiome(biomeSpirit);
+		BiomeManager.addBiome(BiomeType.COOL, new BiomeManager.BiomeEntry(biomeSpirit, 6));
+		BiomeManager.addSpawnBiome(biomeSpirit); 
+		
+		GameRegistry.register(biomeBurntScar);
+		BiomeDictionary.registerBiomeType(biomeBurntScar, BiomeDictionary.Type.DEAD);
+		BiomeManager.addBiome(BiomeType.WARM, new BiomeManager.BiomeEntry(biomeBurntScar, 4));
+		BiomeManager.addSpawnBiome(biomeBurntScar);
 		
 	}
 

@@ -50,11 +50,12 @@ public class BiomeSpirit extends Biome {
 	    {
 	        super(properties);
 	        this.type = typeIn;
-	        this.theBiomeDecorator.treesPerChunk = 10;
+	        this.theBiomeDecorator.treesPerChunk = 11;
 	        this.theBiomeDecorator.grassPerChunk = 2;
 	        this.topBlock = Blocks.GRASS.getDefaultState();
 	        this.fillerBlock = Blocks.DIRT.getDefaultState();
 	        this.setRegistryName(Reference.TCbiomes.SPIRIT.getRegistryName());
+	        
 	        
 	        
 	        
@@ -73,7 +74,7 @@ public class BiomeSpirit extends Biome {
 
 	        if (this.type == BiomeSpirit.Type.ROOFED)
 	        {
-	            this.theBiomeDecorator.treesPerChunk = 13;
+	            this.theBiomeDecorator.treesPerChunk = 9;
 	            this.theBiomeDecorator.flowersPerChunk = 10;
 	            this.theBiomeDecorator.grassPerChunk = 3;
 	       
@@ -193,7 +194,8 @@ public class BiomeSpirit extends Biome {
 	    @Override
 	    public int getGrassColorAtPos(BlockPos pos)
 	    {
-	    	return 0x0066FF;
+	    	
+	    return 0x003399;
 	    }
 	    @SideOnly(Side.CLIENT)
 	    @Override
@@ -207,8 +209,16 @@ public class BiomeSpirit extends Biome {
 	  @Override
 	    public int getFoliageColorAtPos(BlockPos pos)
 	    {
-		  return 0x0066FF;
+		  return 0x0033CC;
 	     //   return 16777215;
+	    }
+	  
+	    @Override
+	    public int getWaterColorMultiplier()
+	    {
+	        net.minecraftforge.event.terraingen.BiomeEvent.GetWaterColor event = new net.minecraftforge.event.terraingen.BiomeEvent.GetWaterColor(this, 183071);
+	        net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(event);
+	        return event.getNewColor();
 	    }
 	 
 
