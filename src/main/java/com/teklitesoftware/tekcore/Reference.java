@@ -78,8 +78,33 @@ public class Reference {
 	}
 	public static enum TekCoreBlocks {
 		SAPPHIREORE("sapphireore", "BlockSO"),
+		GLG("glassglowstone", "BlockGlassGlowstone"),
+		OT("oaktable", "BlockOakTable"),
+		ST("sprucetable", "BlockSpruceTable"),
+		BT("birchtable", "BlockBirchTable"),
+		JT("jungletable", "BlockJungleTable"),
+		AT("acaciatable", "BlockAcaciaTable"),
+		DOT("darkoaktable", "BlockDarkOakTable"),
 		CRYSTALLIZER("crystallizer", "BlockCrystallizer"),
-		LIT_CRYSTALLIZER("lit_crystallizer", "BlockCrystallizer");
+		LIT_CRYSTALLIZER("lit_crystallizer", "BlockCrystallizer"),
+		BBRICK("bbrick", "BlockBbrick"),
+		BLBRICK("blbrick", "BlockBlbrick"),
+		GBRICK("gbrick", "BlockGbrick"),
+		MBRICK("mbrick", "BlockMbrick"),
+		PBRICK("pbrick", "BlockPbrick"),
+		YBRICK("ybrick", "BlockYbrick"),
+		BBST("bbst", "BlockBBST"),
+		BLBST("blbst", "BlockBLBST"),
+		GBST("gbst", "BlockGBST"),
+		MBST("mbst", "BlockMBST"),
+		PBST("pbst", "BlockPBST"),
+		YBST("ybst", "BlockYBST"),
+		SAPPHIREBLOCK("sb", "BlockSapBlock"),
+		DT("dt", "BlockDyeTable"),
+		WW("ww", "BlockWhiteWood"),
+		BW("bw", "BlockBlackWood"),
+		WHITETABLE("whitetable", "BlockWhiteTable"),
+		BLACKTABLE("blacktable", "BlockBlackTable");
 		
 		private String unlocalizedName;
 		private String registryName;

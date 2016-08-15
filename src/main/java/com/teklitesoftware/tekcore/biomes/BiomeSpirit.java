@@ -74,7 +74,7 @@ public class BiomeSpirit extends Biome {
 
 	        if (this.type == BiomeSpirit.Type.ROOFED)
 	        {
-	            this.theBiomeDecorator.treesPerChunk = 9;
+	            this.theBiomeDecorator.treesPerChunk = 12;
 	            this.theBiomeDecorator.flowersPerChunk = 10;
 	            this.theBiomeDecorator.grassPerChunk = 3;
 	       

@@ -1,7 +1,9 @@
 package com.teklitesoftware.tekcore.crafting;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.teklitesoftware.tekcore.init.*;
@@ -12,8 +14,31 @@ public class ModCrafting {
 
 	public static void register() {
 		// Shapeless Recipes
+		
+			//Blocks
+		/*	GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.bbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 0));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 4));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 12));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.gbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 2));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.gbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 10));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.mbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 13));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.mbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 9));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.pbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 5));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.ybrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 11));
+			
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.bbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 0));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 4));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 12));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.gbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 2));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.gbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 10));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.mbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 13));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.mbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 9));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.pbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 5));
+			GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.ybst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 11)); */
+			
 			//Mats
-			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ModItems.ItemIndex.Ris.ordinal())), Items.STICK, Items.IRON_INGOT);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ModItems.ItemIndex.Ris.ordinal()), 2), Items.STICK, Items.IRON_INGOT);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ModItems.ItemIndex.singot.ordinal()), 9), ModBlocks.sb);
 			
 			//OH Iron
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.ohipick.ordinal())), ModItems.m_items.get(ItemIndex.iipick.ordinal()), Blocks.OBSIDIAN);
@@ -37,6 +62,20 @@ public class ModCrafting {
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.dohhoe.ordinal())), ModItems.m_items.get(ItemIndex.iidhoe.ordinal()), Blocks.OBSIDIAN);		
 			
 		//Shaped Recipes
+			
+			//Blocks
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.glassglowstone), new Object[]{"XGX", "XSX", "XGX", 'X', Blocks.COBBLESTONE, 'G', Blocks.GLASS, 'S', Blocks.GLOWSTONE});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.oaktable), new Object[]{"XXX", "I I", "I I", 'X', new ItemStack(Blocks.PLANKS, 1, 0), 'I', Items.STICK});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.birchtable), new Object[]{"XXX", "I I", "I I", 'X', new ItemStack(Blocks.PLANKS, 1, 2), 'I', Items.STICK});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.sprucetable), new Object[]{"XXX", "I I", "I I", 'X', new ItemStack(Blocks.PLANKS, 1, 1), 'I', Items.STICK});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.jungletable), new Object[]{"XXX", "I I", "I I", 'X', new ItemStack(Blocks.PLANKS, 1, 3), 'I', Items.STICK});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.acaciatable), new Object[]{"XXX", "I I", "I I", 'X', new ItemStack(Blocks.PLANKS, 1, 4), 'I', Items.STICK});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.darkoaktable), new Object[]{"XXX", "I I", "I I", 'X', new ItemStack(Blocks.PLANKS, 1, 5), 'I', Items.STICK});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.whitetable), new Object[]{"XXX", "I I", "I I", 'X', ModBlocks.ww, 'I', Items.STICK});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.blacktable), new Object[]{"XXX", "I I", "I I", 'X', ModBlocks.bw, 'I', Items.STICK});
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.sb), new Object[]{"XXX", "XXX", "XXX", 'X', ModItems.m_items.get(ItemIndex.singot.ordinal())});
+			
+			GameRegistry.addRecipe(new ItemStack(ModBlocks.dt), new Object[]{"RGB", "XXX", "XXX", 'R', new ItemStack(Items.DYE, 1, 1), 'G', new ItemStack(Items.DYE, 1, 2), 'B', new ItemStack(Items.DYE, 1, 4), 'X', new ItemStack(Blocks.PLANKS, 1, 0)});
 			//Sapphire Tools
 			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.sspade.ordinal())), new Object[] {"X  ", "I  ", "I  ", 'X', ModItems.m_items.get(ItemIndex.singot.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
 			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.sspade.ordinal())), new Object[] {" X ", " I ", " I ", 'X', ModItems.m_items.get(ItemIndex.singot.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});

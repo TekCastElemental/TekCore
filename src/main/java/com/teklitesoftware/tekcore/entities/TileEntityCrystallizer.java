@@ -78,7 +78,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	    /**
 	     * Removes up to a specified number of items from an inventory slot and returns them in a new stack.
 	     */
-
+	    @Override
 	    public ItemStack decrStackSize(int index, int count)
 	    {
 	    	 return ItemStackHelper.getAndSplit(this.furnaceItemStacks, index, count);
@@ -87,6 +87,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	    /**
 	     * Removes a stack from the given slot and returns it.
 	     */
+	    @Override
 	    public ItemStack removeStackFromSlot(int index)
 	    {
 	    	return ItemStackHelper.getAndRemove(this.furnaceItemStacks, index);
@@ -95,6 +96,7 @@ public class TileEntityCrystallizer extends TileEntityFurnace implements IInvent
 	    /**
 	     * Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
 	     */
+	    @Override
 	    public void setInventorySlotContents(int index, ItemStack stack)
 	    {
 	        boolean flag = stack != null && stack.isItemEqual(this.furnaceItemStacks[index]) && ItemStack.areItemStackTagsEqual(stack, this.furnaceItemStacks[index]);

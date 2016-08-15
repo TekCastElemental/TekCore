@@ -16,6 +16,6 @@ public class TabTekCoreBlocks extends CreativeTabs {
 	@Override
 	public Item getTabIconItem() {
 		
-		return Item.getItemFromBlock(ModBlocks.Crystallizer);
+		return Item.getItemFromBlock(ModBlocks.glassglowstone);
 	}
 }

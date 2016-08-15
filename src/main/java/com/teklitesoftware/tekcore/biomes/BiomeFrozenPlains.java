@@ -32,7 +32,7 @@ public class BiomeFrozenPlains extends Biome {
     {
         super(properties);
         this.type = typeIn;
-        this.theBiomeDecorator.treesPerChunk = 1;
+        this.theBiomeDecorator.treesPerChunk = 2;
         this.theBiomeDecorator.grassPerChunk = 5;
         this.topBlock = Blocks.SNOW_LAYER.getDefaultState();
         this.fillerBlock = Blocks.DIRT.getDefaultState();

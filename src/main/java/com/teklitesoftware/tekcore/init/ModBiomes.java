@@ -37,7 +37,7 @@ public class ModBiomes {
 	
 	public static void registerBiomes() {
 		biomeSpirit = new BiomeSpirit(com.teklitesoftware.tekcore.biomes.BiomeSpirit.Type.ROOFED, new BiomeProperties("Spirit Woods").setRainfall(1.0F).setTemperature(0.5F).setBaseHeight(0.5F).setHeightVariation(0.1F));
-		biomefrozenPlains = new BiomeFrozenPlains(BiomeFrozenPlains.Type.NORMAL, new BiomeProperties("Frozen Plains").setRainfall(1.0F).setTemperature(0F).setBaseHeight(0.5F).setHeightVariation(0F));
+		biomefrozenPlains = new BiomeFrozenPlains(BiomeFrozenPlains.Type.NORMAL, new BiomeProperties("Frozen Plains").setRainfall(2.0F).setTemperature(0F).setBaseHeight(0.5F).setHeightVariation(0F));
 		biomeBurntScar = new BiomeBurntScar(BiomeBurntScar.Type.NORMAL, new BiomeProperties("Burnt Scar").setRainfall(0F).setTemperature(1.5F).setBaseHeight(0.5F).setHeightVariation(0F));
 		
 		GameRegistry.register(biomefrozenPlains);

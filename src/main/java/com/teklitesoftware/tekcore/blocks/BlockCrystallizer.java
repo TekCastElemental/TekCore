@@ -57,7 +57,7 @@ private static boolean keepInventory;
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		if(!name.contains("lit")) this.setCreativeTab(TCengine.blocks);
+	//	if(!name.contains("lit")) this.setCreativeTab(TCengine.blocks);
 	}
 	
 	@Override
@@ -174,7 +174,7 @@ public static void setState(boolean active, World worldIn, BlockPos pos)
 	@Override
 	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		if(!worldIn.isRemote) {
-			playerIn.openGui(TCengine.instance, CGuiHandler.CRYSTALLIZER, worldIn, pos.getX(), pos.getY(), pos.getZ());
+		//	playerIn.openGui(TCengine.instance, CGuiHandler.CRYSTALLIZER, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;
 	}
