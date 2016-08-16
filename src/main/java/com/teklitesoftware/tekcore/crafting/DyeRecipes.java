@@ -83,8 +83,8 @@ public class DyeRecipes {
 		this.addShapelessRecipe(new ItemStack(ModBlocks.pbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 5));
 		this.addShapelessRecipe(new ItemStack(ModBlocks.ybst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 11));
 		
-		this.addShapelessRecipe(new ItemStack(ModBlocks.ww), new ItemStack(Blocks.PLANKS, 1, 0), new ItemStack(Items.DYE, 1, 0));
-		this.addShapelessRecipe(new ItemStack(ModBlocks.bw), new ItemStack(Blocks.PLANKS, 1, 0), new ItemStack(Items.DYE, 1, 15));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.ww), new ItemStack(Blocks.PLANKS, 1, 0), new ItemStack(Items.DYE, 1, 15));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.bw), new ItemStack(Blocks.PLANKS, 1, 0), new ItemStack(Items.DYE, 1, 0));
     }
 
     /**

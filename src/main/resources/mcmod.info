@@ -3,7 +3,7 @@
   "modid": "tekcore",
   "name": "TekCore",
   "description": "Spiritual successor to maxCORE 2.",
-  "version": "0.8beta",
+  "version": "1.0",
   "credits": "Written by ElementalBlades, help from DeathDev, texturework from Irish",
   "mcversion": "${mcversion}",
   "url": "http://www.TekLiteSoftware.com",
