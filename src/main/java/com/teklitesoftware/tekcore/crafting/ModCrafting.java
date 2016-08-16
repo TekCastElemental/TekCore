@@ -54,6 +54,13 @@ public class ModCrafting {
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.ohsspade.ordinal())), ModItems.m_items.get(ItemIndex.sspade.ordinal()), Blocks.OBSIDIAN);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.ohshoe.ordinal())), ModItems.m_items.get(ItemIndex.shoe.ordinal()), Blocks.OBSIDIAN);		
 			
+			//OH BS
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.ohbspick.ordinal())), ModItems.m_items.get(ItemIndex.bspick.ordinal()), Blocks.OBSIDIAN);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.ohbsaxe.ordinal())), ModItems.m_items.get(ItemIndex.bsaxe.ordinal()), Blocks.OBSIDIAN);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.ohbssword.ordinal())), ModItems.m_items.get(ItemIndex.bssword.ordinal()), Blocks.OBSIDIAN);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.ohbsspade.ordinal())), ModItems.m_items.get(ItemIndex.bsspade.ordinal()), Blocks.OBSIDIAN);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.ohbshoe.ordinal())), ModItems.m_items.get(ItemIndex.bshoe.ordinal()), Blocks.OBSIDIAN);	
+			
 			//OH Diamond
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.dohpick.ordinal())), ModItems.m_items.get(ItemIndex.iidpick.ordinal()), Blocks.OBSIDIAN);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.dohaxe.ordinal())), ModItems.m_items.get(ItemIndex.iidaxe.ordinal()), Blocks.OBSIDIAN);
@@ -88,6 +95,19 @@ public class ModCrafting {
 			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.shoe.ordinal())), new Object[] {" XX", " I ", " I ", 'X', ModItems.m_items.get(ItemIndex.singot.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
 			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.saxe.ordinal())), new Object[] {"XX ", "XI ", " I ", 'X', ModItems.m_items.get(ItemIndex.singot.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
 			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.saxe.ordinal())), new Object[] {" XX", " IX", " I ", 'X', ModItems.m_items.get(ItemIndex.singot.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			
+			//Burnt Scar Tools
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bsspade.ordinal())), new Object[] {"X  ", "I  ", "I  ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bsspade.ordinal())), new Object[] {" X ", " I ", " I ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bsspade.ordinal())), new Object[] {"  X", "  I", "  I", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bssword.ordinal())), new Object[] {"X  ", "X  ", "I  ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bssword.ordinal())), new Object[] {" X ", " X ", " I ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bssword.ordinal())), new Object[] {"  X", "  X", "  I", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bspick.ordinal())), new Object[] {"XXX", " I ", " I ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bshoe.ordinal())), new Object[] {"XX ", " I ", " I ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bshoe.ordinal())), new Object[] {" XX", " I ", " I ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bsaxe.ordinal())), new Object[] {"XX ", "XI ", " I ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.bsaxe.ordinal())), new Object[] {" XX", " IX", " I ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal()), 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
 			
 			//Iron Tools
 			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.iispade.ordinal())), new Object[] {"X  ", "I  ", "I  ", 'X', Items.IRON_INGOT, 'I', ModItems.m_items.get(ItemIndex.Ris.ordinal())});
@@ -124,8 +144,17 @@ public class ModCrafting {
 			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.sapphireChestplate.ordinal())), new Object[]{"X X", "XXX", "XXX", 'X', ModItems.m_items.get(ItemIndex.singot.ordinal())});
 			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.sapphireLeggings.ordinal())), new Object[]{"XXX", "X X", "X X", 'X', ModItems.m_items.get(ItemIndex.singot.ordinal())}); 
 			
+			//Burnt Scar Armor
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.BurntScarHelmet.ordinal())), new Object[]{"XXX", "X X", "   ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.BurntScarHelmet.ordinal())), new Object[]{"   ", "XXX", "X X", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.BurntScarBoots.ordinal())), new Object[]{"X X", "X X", "   ", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.BurntScarBoots.ordinal())), new Object[]{"   ", "X X", "X X", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.BurntScarChestplate.ordinal())), new Object[]{"X X", "XXX", "XXX", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal())});
+			GameRegistry.addRecipe(new ItemStack(ModItems.m_items.get(ItemIndex.BurntScarLeggings.ordinal())), new Object[]{"XXX", "X X", "X X", 'X', ModItems.m_items.get(ItemIndex.gouef.ordinal())}); 
+			
 		// Smelting Recipes
 		GameRegistry.addSmelting(ModBlocks.sapphireore, new ItemStack(ModItems.m_items.get(ModItems.ItemIndex.singot.ordinal())), 0.1f);
+		GameRegistry.addSmelting(ModItems.m_items.get(ItemIndex.mouef.ordinal()), new ItemStack(ModItems.m_items.get(ItemIndex.gouef.ordinal())), 0.1f);
 		
 		
 

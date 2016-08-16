@@ -18,6 +18,11 @@ item.tekcore:sapphireChestplate.name=Sapphire Chestplate
 item.tekcore:sapphireLeggings.name=Sapphire Leggings
 item.tekcore:sapphireBoots.name=Sapphire Boots
 
+item.tekcore:BurntScarHelmet.name=Helmet of the Burnt Scar
+item.tekcore:BurntScarChestplate.name=Chestplate of the Burnt Scar
+item.tekcore:BurntScarLeggings.name=Leggings of the Burnt Scar
+item.tekcore:BurntScarBoots.name=Boots of the Burnt Scar
+
 item.ohiaxe.name=Obsidian Headed Iron Axe
 item.ohipick.name=Obsidian Headed Iron Pickaxe
 item.ohisword.name=Obsidian Headed Iron Sword
@@ -41,6 +46,21 @@ item.dohpick.name=Obsidian Headed Diamond Pickaxe
 item.dohsword.name=Obsidian Headed Diamond Sword
 item.dohhoe.name=Obsidian Headed Diamond Hoe
 item.dohspade.name=Obsidian Headed Diamond Spade
+
+item.bsaxe.name=Axe of the Burnt Scar
+item.bspick.name=Pickaxe of the Burnt Scar
+item.bssword.name=Sword of the Burnt Scar
+item.bshoe.name=Hoe of the Burnt Scar
+item.bsspade.name=Spade of the Burnt Scar
+
+item.ohbsaxe.name=Obsidian Headed Axe of the Burnt Scar
+item.ohbspick.name=Obsidian Headed Pickaxe of the Burnt Scar
+item.ohbssword.name=Obsidian Headed Sword of the Burnt Scar
+item.ohbshoe.name=Obsidian Headed Hoe of the Burnt Scar
+item.ohbsspade.name=Obsidian Headed Spade of the Burnt Scar
+
+item.mouef.name=Mote of Unending Flame
+item.gouef.name=Gem of Unending Flame
 
 tile.sapphireore.name=Sapphire Ore
 tile.crystallizer.name=Crystallizer
@@ -75,6 +95,8 @@ tile.sb.name=Sapphire Block
 
 tile.ww.name=White Oak Planks
 tile.bw.name=Black Oak Planks
+
+tile.uefo.name=Ore of Unending Flame
 
 itemGroup.tabTCT=TekCore Tools
 itemGroup.tabTCM=TekCore Materials & Equipment

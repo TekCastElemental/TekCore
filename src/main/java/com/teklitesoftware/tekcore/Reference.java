@@ -17,6 +17,7 @@ public class Reference {
 		//Mats
 		RIS("Ris", "ItemRis"),
 		SINGOT("singot", "Itemsingot"),
+		MOUEF("mouef", "ItemMouef"),
 		
 		//Tools
 		//base sapphire
@@ -58,7 +59,23 @@ public class Reference {
 		DOHSPADE("dohspade", "Itemdohspade"),
 		DOHSWORD("dohsword", "Itemdohsword"),
 		DOHHOE("dohhoe", "Itemdohhoe"),
-		DOHPICK("dohpick", "Itemdohpick");
+		DOHPICK("dohpick", "Itemdohpick"),
+		
+		GOUEF("gouef", "ItemGOUEF"),
+		
+		BSAXE("bsaxe", "ItemBSAXE"),
+		BSSWORD("bssword", "ItemBSSWORD"),
+		BSSPADE("bsspade", "ItemBSSPADE"),
+		BSHOE("bshoe", "ItemBSHOE"),
+		BSPICK("bspick", "ItemBSPICK"),
+		
+		OHBSAXE("ohbsaxe", "ItemOHBSAXE"),
+		OHBSSWORD("ohbssword", "ItemOHBSSWORD"),
+		OHBSSPADE("ohbsspade", "ItemOHBSSPADE"),
+		OHBSHOE("ohbshoe", "ItemOHBSHOE"),
+		OHBSPICK("ohbspick", "ItemOHBSPICK");
+		
+		
 		
 		private String unlocalizedName;
 		private String registryName;
@@ -104,8 +121,8 @@ public class Reference {
 		WW("ww", "BlockWhiteWood"),
 		BW("bw", "BlockBlackWood"),
 		WHITETABLE("whitetable", "BlockWhiteTable"),
-		BLACKTABLE("blacktable", "BlockBlackTable");
-		
+		BLACKTABLE("blacktable", "BlockBlackTable"),
+		UEFO("uefo", "BlockUEFO");
 		private String unlocalizedName;
 		private String registryName;
 		

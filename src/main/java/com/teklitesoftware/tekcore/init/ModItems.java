@@ -2,6 +2,19 @@ package com.teklitesoftware.tekcore.init;
 
 import java.util.ArrayList;
 
+import com.teklitesoftware.tekcore.items.ItemBSAXE;
+import com.teklitesoftware.tekcore.items.ItemBSHOE;
+import com.teklitesoftware.tekcore.items.ItemBSPICK;
+import com.teklitesoftware.tekcore.items.ItemBSSPADE;
+import com.teklitesoftware.tekcore.items.ItemBSSWORD;
+import com.teklitesoftware.tekcore.items.ItemBurntScarArmor;
+import com.teklitesoftware.tekcore.items.ItemGOUEF;
+import com.teklitesoftware.tekcore.items.ItemMouef;
+import com.teklitesoftware.tekcore.items.ItemOHBSAXE;
+import com.teklitesoftware.tekcore.items.ItemOHBSHOE;
+import com.teklitesoftware.tekcore.items.ItemOHBSPICK;
+import com.teklitesoftware.tekcore.items.ItemOHBSSPADE;
+import com.teklitesoftware.tekcore.items.ItemOHBSSWORD;
 import com.teklitesoftware.tekcore.items.ItemRis;
 import com.teklitesoftware.tekcore.items.ItemSapphireArmor;
 import com.teklitesoftware.tekcore.items.Itemdohaxe;
@@ -54,8 +67,10 @@ public class ModItems {
 	public static ToolMaterial OHDIAMOND = EnumHelper.addToolMaterial("ohdiamond", 3, 2000, 8.0F, 3.0F, 10);
 	public static ToolMaterial RIIRON = EnumHelper.addToolMaterial("riiron", 2, 500, 6.5F, 2.0F, 14);
 	public static ToolMaterial OHIRON = EnumHelper.addToolMaterial("ohiron", 2, 750, 6.5F, 2.0F, 14);
-	public static ArmorMaterial ARMOR_SAPPHIRE = EnumHelper.addArmorMaterial("aSapphire", "tekcore:sapphireArmor", 24, new int[] { 2, 7, 4, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F);
-	
+	public static ToolMaterial TOOL_BS = EnumHelper.addToolMaterial("bs", 3, 2000, 8.5F, 3.5F, 10);
+	public static ToolMaterial TOOL_OHBS = EnumHelper.addToolMaterial("ohbs", 3, 2250, 8.5F, 3.5F, 10);
+	public static ArmorMaterial ARMOR_SAPPHIRE = EnumHelper.addArmorMaterial("aSapphire", "tekcore:sapphireArmor", 24, new int[] { 2, 7, 4, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0F);
+	public static ArmorMaterial ARMOR_BURNTSCAR = EnumHelper.addArmorMaterial("aburntscar", "tekcore:BurntScar", 25, new int[]{2, 8, 5, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 
 
 	public enum ItemIndex{
@@ -102,7 +117,28 @@ public class ModItems {
 		   dohsword,
 		   dohpick,
 		   dohhoe,
-
+		   
+		   mouef,
+		
+		   BurntScarHelmet,
+		   BurntScarChestplate,
+		   BurntScarLeggings,
+		   BurntScarBoots,
+		   
+		   gouef,
+		
+			bsaxe,
+			bsspade,
+			bssword,
+			bspick,
+			bshoe,
+			
+			ohbsaxe,
+			ohbsspade,
+			ohbssword,
+			ohbspick,
+			ohbshoe;
+		
 		}
 	
 
@@ -155,9 +191,26 @@ public class ModItems {
 		m_items.add(new Itemdohpick(OHDIAMOND));
 		m_items.add(new Itemdohhoe(OHDIAMOND));
 
+		m_items.add(new ItemMouef());
 		
+		m_items.add(new ItemBurntScarArmor("BurntScarHelmet", EntityEquipmentSlot.HEAD));
+		m_items.add(new ItemBurntScarArmor("BurntScarChestplate", EntityEquipmentSlot.CHEST));
+		m_items.add(new ItemBurntScarArmor("BurntScarLeggings", EntityEquipmentSlot.LEGS));
+		m_items.add(new ItemBurntScarArmor("BurntScarBoots", EntityEquipmentSlot.FEET));
+		
+		m_items.add(new ItemGOUEF());
 
-
+		m_items.add(new ItemBSAXE(TOOL_BS, 3, 8.5F));
+		m_items.add(new ItemBSSPADE(TOOL_BS));
+		m_items.add(new ItemBSSWORD(TOOL_BS));
+		m_items.add(new ItemBSPICK(TOOL_BS));
+		m_items.add(new ItemBSHOE(TOOL_BS));
+		
+		m_items.add(new ItemOHBSAXE(TOOL_OHBS, 3, 8.5F));
+		m_items.add(new ItemOHBSSPADE(TOOL_OHBS));
+		m_items.add(new ItemOHBSSWORD(TOOL_OHBS));
+		m_items.add(new ItemOHBSPICK(TOOL_OHBS));
+		m_items.add(new ItemOHBSHOE(TOOL_OHBS));
 
 	}
 

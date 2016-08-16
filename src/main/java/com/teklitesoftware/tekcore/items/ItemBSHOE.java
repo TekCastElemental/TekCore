@@ -1,0 +1,16 @@
+package com.teklitesoftware.tekcore.items;
+
+import com.teklitesoftware.tekcore.Reference;
+import com.teklitesoftware.tekcore.TCengine;
+
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemHoe;
+
+public class ItemBSHOE extends ItemHoe {
+	public ItemBSHOE(ToolMaterial material) {
+		super(material);
+		setUnlocalizedName(Reference.TekCoreItems.BSHOE.getUnlocalizedName());
+		setRegistryName(Reference.TekCoreItems.BSHOE.getRegistryName());
+		this.setCreativeTab(TCengine.tools);
+	}
+}
