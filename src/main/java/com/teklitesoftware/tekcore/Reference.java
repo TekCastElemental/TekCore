@@ -73,9 +73,23 @@ public class Reference {
 		OHBSSWORD("ohbssword", "ItemOHBSSWORD"),
 		OHBSSPADE("ohbsspade", "ItemOHBSSPADE"),
 		OHBSHOE("ohbshoe", "ItemOHBSHOE"),
-		OHBSPICK("ohbspick", "ItemOHBSPICK");
+		OHBSPICK("ohbspick", "ItemOHBSPICK"),
 		
+		MOSW("mosw", "ItemMOSW"),
 		
+		SWAXE("swaxe", "ItemSWAXE"),
+		SWSWORD("swsword", "ItemSWSWORD"),
+		SWSPADE("swspade", "ItemSWSPADE"),
+		SWHOE("swhoe", "ItemSWHOE"),
+		SWPICK("swpick", "ItemSWPICK"),
+		
+		OHSWAXE("ohswaxe", "ItemOHSWAXE"),
+		OHSWSWORD("ohswsword", "ItemOHSWSWORD"),
+		OHSWSPADE("ohswspade", "ItemOHSWSPADE"),
+		OHSWHOE("ohswhoe", "ItemOHSWHOE"),
+		OHSWPICK("ohswpick", "ItemOHSWPICK"),
+		
+		GOSW("gosw", "ItemGOSW");
 		
 		private String unlocalizedName;
 		private String registryName;
@@ -122,7 +136,8 @@ public class Reference {
 		BW("bw", "BlockBlackWood"),
 		WHITETABLE("whitetable", "BlockWhiteTable"),
 		BLACKTABLE("blacktable", "BlockBlackTable"),
-		UEFO("uefo", "BlockUEFO");
+		UEFO("uefo", "BlockUEFO"),
+		OSG("osg", "BlockOSG");
 		private String unlocalizedName;
 		private String registryName;
 		

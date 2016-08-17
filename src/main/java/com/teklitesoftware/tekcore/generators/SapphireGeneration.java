@@ -52,6 +52,17 @@ public class SapphireGeneration implements IWorldGenerator {
 			
 			(new WorldGenMinable(ModBlocks.mouefore.getDefaultState(), 2)).generate(world, rand, sPos);
 		}
+		
+		for (int k = 0; k < 3; k++) {
+			int firstBlockXCoord = chunkX + rand.nextInt(16);
+			int firstBlockZCoord = chunkZ + rand.nextInt(16);
+			// Will be found between y = 0 and y = 15
+			int sY = rand.nextInt(15);
+			BlockPos sPos = new BlockPos(firstBlockXCoord, sY, firstBlockZCoord);
+
+			
+			(new WorldGenMinable(ModBlocks.osg.getDefaultState(), 2)).generate(world, rand, sPos);
+		}
 		for (int k = 0; k < 10; k++) {
 			int firstBlockXCoord = chunkX + rand.nextInt(16);
 			int firstBlockZCoord = chunkZ + rand.nextInt(16);

@@ -17,6 +17,7 @@ import com.teklitesoftware.tekcore.blocks.BlockGlassGlowstone;
 import com.teklitesoftware.tekcore.blocks.BlockJungleTable;
 import com.teklitesoftware.tekcore.blocks.BlockMBST;
 import com.teklitesoftware.tekcore.blocks.BlockMbrick;
+import com.teklitesoftware.tekcore.blocks.BlockOSG;
 import com.teklitesoftware.tekcore.blocks.BlockOakTable;
 import com.teklitesoftware.tekcore.blocks.BlockPBST;
 import com.teklitesoftware.tekcore.blocks.BlockPbrick;
@@ -73,6 +74,8 @@ public class ModBlocks {
 	
 	public static Block mouefore;
 	
+	public static Block osg;
+	
 /*	public static Block bbs;
 	public static Block blbs;
 	public static Block gbs;
@@ -125,6 +128,8 @@ public class ModBlocks {
 		blacktable = new BlockBlackTable();
 		
 		mouefore = new BlockUEFO();
+		
+		osg = new BlockOSG();
 	}
 
 	public static void register() {
@@ -161,6 +166,9 @@ public class ModBlocks {
 		GameRegistry.register(blacktable);
 		
 		GameRegistry.register(mouefore);
+		
+		GameRegistry.register(osg);
+		
 	/*	GameRegistry.register(bbs);
 		GameRegistry.register(blbs);
 		GameRegistry.register(gbs);
@@ -200,6 +208,8 @@ public class ModBlocks {
 		
 		GameRegistry.register(new ItemBlock(mouefore).setRegistryName(mouefore.getRegistryName()));
 		
+		GameRegistry.register(new ItemBlock(osg).setRegistryName(osg.getRegistryName()));
+		
 		GameRegistry.register(new ItemBlock(ww).setRegistryName(ww.getRegistryName()));
 		GameRegistry.register(new ItemBlock(bw).setRegistryName(bw.getRegistryName()));
 		
@@ -209,6 +219,8 @@ public class ModBlocks {
 		
 		GameRegistry.register(new ItemBlock(whitetable).setRegistryName(whitetable.getRegistryName()));
 		GameRegistry.register(new ItemBlock(blacktable).setRegistryName(blacktable.getRegistryName()));
+		
+		
 		
 		registerBlock(Crystallizer);
 		registerBlock(Lit_Crystallizer);
@@ -263,6 +275,8 @@ public class ModBlocks {
 		registerRender(blacktable);
 		
 		registerRender(mouefore);
+		
+		registerRender(osg);
 		
 	/*	registerRender(bbs);
 		registerRender(blbs);

@@ -23,6 +23,11 @@ item.tekcore:BurntScarChestplate.name=Chestplate of the Burnt Scar
 item.tekcore:BurntScarLeggings.name=Leggings of the Burnt Scar
 item.tekcore:BurntScarBoots.name=Boots of the Burnt Scar
 
+item.tekcore:swHelmet.name=Helmet of the Spirit Woods
+item.tekcore:swChestplate.name=Chestplate of the Spirit Woods
+item.tekcore:swLeggings.name=Leggings of the Spirit Woods
+item.tekcore:swBoots.name=Boots of the Spirit Woods
+
 item.ohiaxe.name=Obsidian Headed Iron Axe
 item.ohipick.name=Obsidian Headed Iron Pickaxe
 item.ohisword.name=Obsidian Headed Iron Sword
@@ -62,6 +67,21 @@ item.ohbsspade.name=Obsidian Headed Spade of the Burnt Scar
 item.mouef.name=Mote of Unending Flame
 item.gouef.name=Gem of Unending Flame
 
+item.swaxe.name=Axe of the Spirit Woods
+item.swpick.name=Pickaxe of the Spirit Woods
+item.swsword.name=Sword of the Spirit Woods
+item.swspade.name=Spade of the Spirit Woods
+item.swhoe.name=Hoe of the Spirit Woods
+
+item.ohswaxe.name=Obsidian Headed Axe of the Spirit Woods
+item.ohswpick.name=Obsidian Headed Pickaxe of the Spirit Woods
+item.ohswsword.name=Obsidian Headed Sword of the Spirit Woods
+item.ohswspade.name=Obsidian Headed Spade of the Spirit Woods
+item.ohswhoe.name=Obsidian Headed Hoe of the Spirit Woods
+
+item.gosw.name=Gem of Spirit's Gaze
+item.mosw.name=Mote of Spirit's Gaze
+
 tile.sapphireore.name=Sapphire Ore
 tile.crystallizer.name=Crystallizer
 tile.glassglowstone.name=Glass Cased Glowstone
@@ -87,6 +107,8 @@ tile.pbst.name=Purple Brick Stair
 tile.ybst.name=Yellow Brick Stair
 
 tile.dt.name=Dye Table
+
+tile.osg.name=Ore of Spirit's Gaze
 
 tile.whitetable.name=White Oak Table
 tile.blacktable.name=Black Oak Table

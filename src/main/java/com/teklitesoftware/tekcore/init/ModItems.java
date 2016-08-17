@@ -8,14 +8,26 @@ import com.teklitesoftware.tekcore.items.ItemBSPICK;
 import com.teklitesoftware.tekcore.items.ItemBSSPADE;
 import com.teklitesoftware.tekcore.items.ItemBSSWORD;
 import com.teklitesoftware.tekcore.items.ItemBurntScarArmor;
+import com.teklitesoftware.tekcore.items.ItemGOSW;
 import com.teklitesoftware.tekcore.items.ItemGOUEF;
+import com.teklitesoftware.tekcore.items.ItemMOSW;
 import com.teklitesoftware.tekcore.items.ItemMouef;
 import com.teklitesoftware.tekcore.items.ItemOHBSAXE;
 import com.teklitesoftware.tekcore.items.ItemOHBSHOE;
 import com.teklitesoftware.tekcore.items.ItemOHBSPICK;
 import com.teklitesoftware.tekcore.items.ItemOHBSSPADE;
 import com.teklitesoftware.tekcore.items.ItemOHBSSWORD;
+import com.teklitesoftware.tekcore.items.ItemOHSWAXE;
+import com.teklitesoftware.tekcore.items.ItemOHSWHOE;
+import com.teklitesoftware.tekcore.items.ItemOHSWPICK;
+import com.teklitesoftware.tekcore.items.ItemOHSWSPADE;
+import com.teklitesoftware.tekcore.items.ItemOHSWSWORD;
 import com.teklitesoftware.tekcore.items.ItemRis;
+import com.teklitesoftware.tekcore.items.ItemSWAXE;
+import com.teklitesoftware.tekcore.items.ItemSWHOE;
+import com.teklitesoftware.tekcore.items.ItemSWPICK;
+import com.teklitesoftware.tekcore.items.ItemSWSPADE;
+import com.teklitesoftware.tekcore.items.ItemSWSWORD;
 import com.teklitesoftware.tekcore.items.ItemSapphireArmor;
 import com.teklitesoftware.tekcore.items.Itemdohaxe;
 import com.teklitesoftware.tekcore.items.Itemdohhoe;
@@ -48,6 +60,7 @@ import com.teklitesoftware.tekcore.items.Itemsingot;
 import com.teklitesoftware.tekcore.items.Itemspick;
 import com.teklitesoftware.tekcore.items.Itemsspade;
 import com.teklitesoftware.tekcore.items.Itemssword;
+import com.teklitesoftware.tekcore.items.ItemswArmor;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.SoundEvents;
@@ -69,6 +82,9 @@ public class ModItems {
 	public static ToolMaterial OHIRON = EnumHelper.addToolMaterial("ohiron", 2, 750, 6.5F, 2.0F, 14);
 	public static ToolMaterial TOOL_BS = EnumHelper.addToolMaterial("bs", 3, 2000, 8.5F, 3.5F, 10);
 	public static ToolMaterial TOOL_OHBS = EnumHelper.addToolMaterial("ohbs", 3, 2250, 8.5F, 3.5F, 10);
+	public static ToolMaterial T_SW = EnumHelper.addToolMaterial("tsw", 3, 1500, 8.0F, 6.5F, 30);
+	public static ToolMaterial OHSW = EnumHelper.addToolMaterial("ohsw", 3, 1750, 8.0F, 6.5F, 30);
+	public static ArmorMaterial A_SW = EnumHelper.addArmorMaterial("asw", "tekcore:swArmor", 24, new int[]{2, 7, 4, 2}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F);
 	public static ArmorMaterial ARMOR_SAPPHIRE = EnumHelper.addArmorMaterial("aSapphire", "tekcore:sapphireArmor", 24, new int[] { 2, 7, 4, 2 }, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0F);
 	public static ArmorMaterial ARMOR_BURNTSCAR = EnumHelper.addArmorMaterial("aburntscar", "tekcore:BurntScar", 25, new int[]{2, 8, 5, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 
@@ -137,7 +153,28 @@ public class ModItems {
 			ohbsspade,
 			ohbssword,
 			ohbspick,
-			ohbshoe;
+			ohbshoe,
+		
+			mosw,
+			
+			swaxe,
+			swspade,
+			swsword,
+			swpick,
+			swhoe,
+			
+			swHelmet,
+			swChestplate,
+			swLeggings,
+			swBoots,
+		
+			gosw,
+	
+			ohswaxe,
+			ohswspade,
+			ohswsword,
+			ohswpick,
+			ohswhoe;
 		
 		}
 	
@@ -211,6 +248,27 @@ public class ModItems {
 		m_items.add(new ItemOHBSSWORD(TOOL_OHBS));
 		m_items.add(new ItemOHBSPICK(TOOL_OHBS));
 		m_items.add(new ItemOHBSHOE(TOOL_OHBS));
+		
+		m_items.add(new ItemMOSW());
+		
+		m_items.add(new ItemSWAXE(T_SW, 3, 8.0F));
+		m_items.add(new ItemSWSPADE(T_SW));
+		m_items.add(new ItemSWSWORD(T_SW));
+		m_items.add(new ItemSWPICK(T_SW));
+		m_items.add(new ItemSWHOE(T_SW));
+		
+		m_items.add(new ItemswArmor("swHelmet", EntityEquipmentSlot.HEAD));
+		m_items.add(new ItemswArmor("swChestplate", EntityEquipmentSlot.CHEST));
+		m_items.add(new ItemswArmor("swLeggings", EntityEquipmentSlot.LEGS));
+		m_items.add(new ItemswArmor("swBoots", EntityEquipmentSlot.FEET));
+		
+		m_items.add(new ItemGOSW());
+		
+		m_items.add(new ItemOHSWAXE(OHSW, 3, 8.0F));
+		m_items.add(new ItemOHSWSPADE(OHSW));
+		m_items.add(new ItemOHSWSWORD(OHSW));
+		m_items.add(new ItemOHSWPICK(OHSW));
+		m_items.add(new ItemOHSWHOE(OHSW));
 
 	}
 
