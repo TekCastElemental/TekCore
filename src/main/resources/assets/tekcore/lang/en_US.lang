@@ -98,13 +98,15 @@ tile.gbrick.name=Green Brick
 tile.mbrick.name=Magenta Brick
 tile.pbrick.name=Purple Brick
 tile.ybrick.name=Yellow Brick
+tile.obrick.name=Orange Brick
 
-tile.bbst.name=Black Brick Stair
-tile.blbst.name=Blue Brick Stair
-tile.gbst.name=Green Brick Stair
-tile.mbst.name=Magenta Brick Stair
-tile.pbst.name=Purple Brick Stair
-tile.ybst.name=Yellow Brick Stair
+tile.bbst.name=Black Brick Stairs
+tile.blbst.name=Blue Brick Stairs
+tile.gbst.name=Green Brick Stairs
+tile.mbst.name=Magenta Brick Stairs
+tile.pbst.name=Purple Brick Stairs
+tile.ybst.name=Yellow Brick Stairs
+tile.obst.name=Orange Brick Stairs
 
 tile.dt.name=Dye Table
 
@@ -112,11 +114,20 @@ tile.osg.name=Ore of Spirit's Gaze
 
 tile.whitetable.name=White Oak Table
 tile.blacktable.name=Black Oak Table
+tile.cwtable.name=Cherry Oak Table
+tile.phtable.name=Purpleheart Oak Table
+
+tile.wws.name=White Oak Stairs
+tile.bws.name=Black Oak Stairs
+tile.cws.name=Cherry Oak Stairs
+tile.pws.name=Purpleheart Oak Stairs
 
 tile.sb.name=Sapphire Block
 
 tile.ww.name=White Oak Planks
 tile.bw.name=Black Oak Planks
+tile.pw.name=Purpleheart Oak Planks
+tile.cw.name=Cherry Oak Planks
 
 tile.uefo.name=Ore of Unending Flame
 

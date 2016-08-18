@@ -3,11 +3,15 @@ package com.teklitesoftware.tekcore.init;
 import com.teklitesoftware.tekcore.blocks.BlockAcaciaTable;
 import com.teklitesoftware.tekcore.blocks.BlockBBST;
 import com.teklitesoftware.tekcore.blocks.BlockBLBST;
+import com.teklitesoftware.tekcore.blocks.BlockBWS;
 import com.teklitesoftware.tekcore.blocks.BlockBbrick;
 import com.teklitesoftware.tekcore.blocks.BlockBirchTable;
 import com.teklitesoftware.tekcore.blocks.BlockBlackTable;
 import com.teklitesoftware.tekcore.blocks.BlockBlackWood;
 import com.teklitesoftware.tekcore.blocks.BlockBlbrick;
+import com.teklitesoftware.tekcore.blocks.BlockCW;
+import com.teklitesoftware.tekcore.blocks.BlockCWS;
+import com.teklitesoftware.tekcore.blocks.BlockCWTable;
 import com.teklitesoftware.tekcore.blocks.BlockCrystallizer;
 import com.teklitesoftware.tekcore.blocks.BlockDarkOakTable;
 import com.teklitesoftware.tekcore.blocks.BlockDyeTable;
@@ -17,14 +21,20 @@ import com.teklitesoftware.tekcore.blocks.BlockGlassGlowstone;
 import com.teklitesoftware.tekcore.blocks.BlockJungleTable;
 import com.teklitesoftware.tekcore.blocks.BlockMBST;
 import com.teklitesoftware.tekcore.blocks.BlockMbrick;
+import com.teklitesoftware.tekcore.blocks.BlockOBST;
 import com.teklitesoftware.tekcore.blocks.BlockOSG;
 import com.teklitesoftware.tekcore.blocks.BlockOakTable;
+import com.teklitesoftware.tekcore.blocks.BlockObrick;
 import com.teklitesoftware.tekcore.blocks.BlockPBST;
+import com.teklitesoftware.tekcore.blocks.BlockPHTable;
+import com.teklitesoftware.tekcore.blocks.BlockPW;
+import com.teklitesoftware.tekcore.blocks.BlockPWS;
 import com.teklitesoftware.tekcore.blocks.BlockPbrick;
 import com.teklitesoftware.tekcore.blocks.BlockSO;
 import com.teklitesoftware.tekcore.blocks.BlockSapBlock;
 import com.teklitesoftware.tekcore.blocks.BlockSpruceTable;
 import com.teklitesoftware.tekcore.blocks.BlockUEFO;
+import com.teklitesoftware.tekcore.blocks.BlockWWS;
 import com.teklitesoftware.tekcore.blocks.BlockWhiteTable;
 import com.teklitesoftware.tekcore.blocks.BlockWhiteWood;
 import com.teklitesoftware.tekcore.blocks.BlockYBST;
@@ -54,6 +64,7 @@ public class ModBlocks {
 	public static Block mbrick;
 	public static Block pbrick;
 	public static Block ybrick;
+	public static Block obrick;
 	
 	public static Block bbst;
 	public static Block blbst;
@@ -61,6 +72,7 @@ public class ModBlocks {
 	public static Block mbst;
 	public static Block pbst;
 	public static Block ybst;
+	public static Block obst;
 	
 	public static Block sb;
 	
@@ -68,13 +80,24 @@ public class ModBlocks {
 	
 	public static Block ww;
 	public static Block bw;
+	public static Block pw;
+	public static Block cw;
 	
 	public static Block whitetable;
 	public static Block blacktable;
+	public static Block phtable;
+	public static Block cwtable;
+	
+	public static Block wws;
+	public static Block bws;
+	public static Block pws;
+	public static Block cws;
 	
 	public static Block mouefore;
 	
 	public static Block osg;
+	
+//	public static Block wwd;
 	
 /*	public static Block bbs;
 	public static Block blbs;
@@ -100,6 +123,7 @@ public class ModBlocks {
 		mbrick = new BlockMbrick();
 		pbrick = new BlockPbrick();
 		ybrick = new BlockYbrick();
+		obrick = new BlockObrick();
 		
 		bbst = new BlockBBST();
 		blbst = new BlockBLBST();
@@ -107,6 +131,7 @@ public class ModBlocks {
 		mbst = new BlockMBST();
 		pbst = new BlockPBST();
 		ybst = new BlockYBST();
+		obst = new BlockOBST();
 		
 		sb = new BlockSapBlock();
 		
@@ -121,15 +146,27 @@ public class ModBlocks {
 		Lit_Crystallizer = new BlockCrystallizer("lit_crystallizer", true);
 		
 		dt = new BlockDyeTable();
+		
 		ww = new BlockWhiteWood();
 		bw = new BlockBlackWood();
+		pw = new BlockPW();
+		cw = new BlockCW();
 
 		whitetable = new BlockWhiteTable();
 		blacktable = new BlockBlackTable();
+		phtable = new BlockPHTable();
+		cwtable = new BlockCWTable();
+		
+		wws = new BlockWWS();
+		bws = new BlockBWS();
+		pws = new BlockPWS();
+		cws = new BlockCWS();
 		
 		mouefore = new BlockUEFO();
 		
 		osg = new BlockOSG();
+		
+	//	wwd = new BlockWWD(Material.WOOD);
 	}
 
 	public static void register() {
@@ -141,6 +178,8 @@ public class ModBlocks {
 		GameRegistry.register(jungletable);
 		GameRegistry.register(acaciatable);
 		GameRegistry.register(darkoaktable);
+		GameRegistry.register(phtable);
+		GameRegistry.register(cwtable);
 		
 		GameRegistry.register(bbrick);
 		GameRegistry.register(blbrick);
@@ -148,6 +187,7 @@ public class ModBlocks {
 		GameRegistry.register(mbrick);
 		GameRegistry.register(pbrick);
 		GameRegistry.register(ybrick);
+		GameRegistry.register(obrick);
 		
 		GameRegistry.register(bbst);
 		GameRegistry.register(blbst);
@@ -155,12 +195,21 @@ public class ModBlocks {
 		GameRegistry.register(mbst);
 		GameRegistry.register(pbst);
 		GameRegistry.register(ybst);
+		GameRegistry.register(obst);
 		
 		GameRegistry.register(sb);
 		
 		GameRegistry.register(dt);
+		
 		GameRegistry.register(ww);
 		GameRegistry.register(bw);
+		GameRegistry.register(pw);
+		GameRegistry.register(cw);
+		
+		GameRegistry.register(wws);
+		GameRegistry.register(bws);
+		GameRegistry.register(cws);
+		GameRegistry.register(pws);
 		
 		GameRegistry.register(whitetable);
 		GameRegistry.register(blacktable);
@@ -168,6 +217,8 @@ public class ModBlocks {
 		GameRegistry.register(mouefore);
 		
 		GameRegistry.register(osg);
+		
+		//GameRegistry.register(wwd);
 		
 	/*	GameRegistry.register(bbs);
 		GameRegistry.register(blbs);
@@ -182,6 +233,7 @@ public class ModBlocks {
 		GameRegistry.register(new ItemBlock(mbrick).setRegistryName(mbrick.getRegistryName()));
 		GameRegistry.register(new ItemBlock(pbrick).setRegistryName(pbrick.getRegistryName()));
 		GameRegistry.register(new ItemBlock(ybrick).setRegistryName(ybrick.getRegistryName()));
+		GameRegistry.register(new ItemBlock(obrick).setRegistryName(obrick.getRegistryName()));
 		
 		GameRegistry.register(new ItemBlock(bbst).setRegistryName(bbst.getRegistryName()));
 		GameRegistry.register(new ItemBlock(blbst).setRegistryName(blbst.getRegistryName()));
@@ -189,6 +241,7 @@ public class ModBlocks {
 		GameRegistry.register(new ItemBlock(mbst).setRegistryName(mbst.getRegistryName()));
 		GameRegistry.register(new ItemBlock(pbst).setRegistryName(pbst.getRegistryName()));
 		GameRegistry.register(new ItemBlock(ybst).setRegistryName(ybst.getRegistryName())); 
+		GameRegistry.register(new ItemBlock(obst).setRegistryName(obst.getRegistryName())); 
 		
 	/*	GameRegistry.register(new ItemBlock(bbs).setRegistryName(bbs.getRegistryName()));
 		GameRegistry.register(new ItemBlock(blbs).setRegistryName(blbs.getRegistryName()));
@@ -212,6 +265,13 @@ public class ModBlocks {
 		
 		GameRegistry.register(new ItemBlock(ww).setRegistryName(ww.getRegistryName()));
 		GameRegistry.register(new ItemBlock(bw).setRegistryName(bw.getRegistryName()));
+		GameRegistry.register(new ItemBlock(pw).setRegistryName(pw.getRegistryName()));
+		GameRegistry.register(new ItemBlock(cw).setRegistryName(cw.getRegistryName()));
+		
+		GameRegistry.register(new ItemBlock(wws).setRegistryName(wws.getRegistryName()));
+		GameRegistry.register(new ItemBlock(bws).setRegistryName(bws.getRegistryName()));
+		GameRegistry.register(new ItemBlock(pws).setRegistryName(pws.getRegistryName()));
+		GameRegistry.register(new ItemBlock(cws).setRegistryName(cws.getRegistryName()));
 		
 		GameRegistry.register(new ItemBlock(sb).setRegistryName(sb.getRegistryName()));
 		
@@ -219,6 +279,10 @@ public class ModBlocks {
 		
 		GameRegistry.register(new ItemBlock(whitetable).setRegistryName(whitetable.getRegistryName()));
 		GameRegistry.register(new ItemBlock(blacktable).setRegistryName(blacktable.getRegistryName()));
+		GameRegistry.register(new ItemBlock(phtable).setRegistryName(phtable.getRegistryName()));
+		GameRegistry.register(new ItemBlock(cwtable).setRegistryName(cwtable.getRegistryName()));
+		
+		//GameRegistry.register(new ItemBlock(wwd).setRegistryName(wwd.getRegistryName()));
 		
 		
 		
@@ -256,6 +320,7 @@ public class ModBlocks {
 		registerRender(mbrick);
 		registerRender(pbrick);
 		registerRender(ybrick);
+		registerRender(obrick);
 		
 		registerRender(bbst);
 		registerRender(blbst);
@@ -263,6 +328,7 @@ public class ModBlocks {
 		registerRender(mbst);
 		registerRender(pbst);
 		registerRender(ybst);
+		registerRender(obst);
 		
 		registerRender(sb);
 		
@@ -270,13 +336,23 @@ public class ModBlocks {
 		
 		registerRender(ww);
 		registerRender(bw);
+		registerRender(pw);
+		registerRender(cw);
+		registerRender(wws);
+		registerRender(bws);
+		registerRender(pws);
+		registerRender(cws);
 		
 		registerRender(whitetable);
 		registerRender(blacktable);
+		registerRender(cwtable);
+		registerRender(phtable);
 		
 		registerRender(mouefore);
 		
 		registerRender(osg);
+		
+		//registerRender(wwd);
 		
 	/*	registerRender(bbs);
 		registerRender(blbs);

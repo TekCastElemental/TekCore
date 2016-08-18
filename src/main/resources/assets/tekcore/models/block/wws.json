@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "tekcore:blocks/wwood",
+        "top": "tekcore:blocks/wwood",
+        "side": "tekcore:blocks/wwood"
+    }
+}

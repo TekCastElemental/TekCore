@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "tekcore:blocks/pw",
+        "top": "tekcore:blocks/pw",
+        "side": "tekcore:blocks/pw"
+    }
+}

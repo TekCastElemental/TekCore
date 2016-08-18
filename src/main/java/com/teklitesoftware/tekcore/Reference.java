@@ -124,12 +124,14 @@ public class Reference {
 		MBRICK("mbrick", "BlockMbrick"),
 		PBRICK("pbrick", "BlockPbrick"),
 		YBRICK("ybrick", "BlockYbrick"),
+		OBRICK("obrick", "BlockObrick"),
 		BBST("bbst", "BlockBBST"),
 		BLBST("blbst", "BlockBLBST"),
 		GBST("gbst", "BlockGBST"),
 		MBST("mbst", "BlockMBST"),
 		PBST("pbst", "BlockPBST"),
 		YBST("ybst", "BlockYBST"),
+		OBST("obst", "BlockOBST"),
 		SAPPHIREBLOCK("sb", "BlockSapBlock"),
 		DT("dt", "BlockDyeTable"),
 		WW("ww", "BlockWhiteWood"),
@@ -137,7 +139,17 @@ public class Reference {
 		WHITETABLE("whitetable", "BlockWhiteTable"),
 		BLACKTABLE("blacktable", "BlockBlackTable"),
 		UEFO("uefo", "BlockUEFO"),
-		OSG("osg", "BlockOSG");
+		OSG("osg", "BlockOSG"),
+		WWD("wwd", "BlockWWD"),
+		PW("pw", "BlockPW"),
+		CW("cw", "BlockCW"),
+		PHT("phtable", "BlockPHTable"),
+		CWT("cwtable", "BlockCWTable"),
+		WWS("wws", "BlockWWS"),
+		BWS("bws", "BlockBWS"),
+		PWS("pws", "BlockPWS"),
+		CWS("cws", "BlockCWS");
+		
 		private String unlocalizedName;
 		private String registryName;
 		

@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "tekcore:blocks/obrick",
+        "top": "tekcore:blocks/obrick",
+        "side": "tekcore:blocks/obrick"
+    }
+}

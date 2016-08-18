@@ -72,6 +72,7 @@ public class DyeRecipes {
 		this.addShapelessRecipe(new ItemStack(ModBlocks.mbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 9));
 		this.addShapelessRecipe(new ItemStack(ModBlocks.pbrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 5));
 		this.addShapelessRecipe(new ItemStack(ModBlocks.ybrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 11));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.obrick), Blocks.BRICK_BLOCK, new ItemStack(Items.DYE, 1, 14));
         
 		this.addShapelessRecipe(new ItemStack(ModBlocks.bbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 0));
 		this.addShapelessRecipe(new ItemStack(ModBlocks.blbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 4));
@@ -82,9 +83,23 @@ public class DyeRecipes {
 		this.addShapelessRecipe(new ItemStack(ModBlocks.mbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 9));
 		this.addShapelessRecipe(new ItemStack(ModBlocks.pbst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 5));
 		this.addShapelessRecipe(new ItemStack(ModBlocks.ybst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 11));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.obst), Blocks.BRICK_STAIRS, new ItemStack(Items.DYE, 1, 14));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.bws), Blocks.OAK_STAIRS, new ItemStack(Items.DYE, 1, 0));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.wws), Blocks.OAK_STAIRS, new ItemStack(Items.DYE, 1, 15));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.pws), Blocks.OAK_STAIRS, new ItemStack(Items.DYE, 1, 5));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.cws), Blocks.OAK_STAIRS, new ItemStack(Items.DYE, 1, 1));
 		
 		this.addShapelessRecipe(new ItemStack(ModBlocks.ww), new ItemStack(Blocks.PLANKS, 1, 0), new ItemStack(Items.DYE, 1, 15));
 		this.addShapelessRecipe(new ItemStack(ModBlocks.bw), new ItemStack(Blocks.PLANKS, 1, 0), new ItemStack(Items.DYE, 1, 0));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.pw), new ItemStack(Blocks.PLANKS, 1, 0), new ItemStack(Items.DYE, 1, 5));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.cw), new ItemStack(Blocks.PLANKS, 1, 0), new ItemStack(Items.DYE, 1, 1));
+		
+		this.addShapelessRecipe(new ItemStack(ModBlocks.wws), new ItemStack(Blocks.OAK_STAIRS, 1, 0), new ItemStack(Items.DYE, 1, 15));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.bws), new ItemStack(Blocks.OAK_STAIRS, 1, 0), new ItemStack(Items.DYE, 1, 0));
+		
+		this.addShapelessRecipe(new ItemStack(ModBlocks.pws), new ItemStack(Blocks.OAK_STAIRS, 1, 0), new ItemStack(Items.DYE, 1, 5));
+		this.addShapelessRecipe(new ItemStack(ModBlocks.cws), new ItemStack(Blocks.OAK_STAIRS, 1, 0), new ItemStack(Items.DYE, 1, 1));
+		
     }
 
     /**
